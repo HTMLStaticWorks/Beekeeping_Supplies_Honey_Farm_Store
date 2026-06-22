@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - HiveFlow</title>
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    .not-found-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      background: var(--color-surface);
+    }
+    
+    .illustration {
+      max-width: 300px;
+      margin-bottom: var(--space-lg);
+    }
+
+    .illustration svg {
+      width: 100%;
+      height: auto;
+      fill: var(--color-primary);
+    }
+    
+    .not-found-title {
+      font-size: clamp(3rem, 5vw, 5rem);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .not-found-text {
+      font-size: 1.25rem;
+      color: var(--color-muted);
+      margin-bottom: var(--space-lg);
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header for 404 -->
+  <header class="header">
+    <div class="container nav-container" style="justify-content: center;">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7.77V16.22L12 22L22 16.22V7.77L12 2Z"/></svg>
+        HiveFlow
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="not-found-section reveal">
+      
+      <div class="illustration">
+        <!-- Lonely Bee & Broken Honeycomb SVG Concept -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Broken Hexagon / Comb -->
+          <path d="M100 20 L160 55 L160 125 L100 160 L40 125 L40 55 Z" fill="none" stroke="var(--color-border)" stroke-width="4" stroke-dasharray="10 5" />
+          <path d="M100 20 L160 55 L160 125 L100 160" fill="none" stroke="var(--color-primary)" stroke-width="4" />
+          <!-- Bee -->
+          <circle cx="100" cy="90" r="25" fill="var(--color-primary)" />
+          <ellipse cx="100" cy="90" rx="15" ry="30" fill="var(--color-secondary)" opacity="0.3" transform="rotate(45 100 90)" />
+          <ellipse cx="100" cy="90" rx="15" ry="30" fill="var(--color-secondary)" opacity="0.3" transform="rotate(-45 100 90)" />
+          <!-- Eyes -->
+          <circle cx="90" cy="85" r="3" fill="var(--color-bg)" />
+          <circle cx="110" cy="85" r="3" fill="var(--color-bg)" />
+          <!-- Stinger -->
+          <path d="M100 115 L95 130 L105 130 Z" fill="var(--color-secondary)" />
+        </svg>
+      </div>
+
+      <h1 class="not-found-title">Lost in the Hive</h1>
+      <p class="not-found-text">This page seems to have been harvested. Let's get you back to the colony.</p>
+      
+      <a href="index.html" class="btn btn-primary" style="padding: 16px 32px;">Return to the Hive</a>
+      
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

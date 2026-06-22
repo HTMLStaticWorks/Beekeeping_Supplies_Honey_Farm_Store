@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your First Hive Setup - HiveFlow</title>
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    .article-layout {
+      display: flex;
+      gap: var(--space-xl);
+      padding-top: var(--space-md);
+    }
+    .article-sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 100px;
+      height: max-content;
+    }
+    .article-content {
+      flex-grow: 1;
+      max-width: 800px;
+    }
+
+    .toc-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: var(--space-md);
+    }
+    .toc-link {
+      display: block;
+      color: var(--color-muted);
+      padding-block: 8px;
+      border-left: 2px solid transparent;
+      padding-left: 12px;
+      transition: all 0.2s;
+    }
+    .toc-link:hover, .toc-link.active {
+      color: var(--color-primary);
+      border-left-color: var(--color-primary);
+    }
+
+    .article-hero {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: var(--space-lg);
+    }
+
+    .article-content h2 { margin-top: var(--space-xl); margin-bottom: var(--space-sm); }
+    .article-content h3 { margin-top: var(--space-lg); margin-bottom: var(--space-sm); }
+    .article-content p { font-size: 1.1rem; margin-bottom: var(--space-md); }
+    
+    @media (max-width: 1024px) {
+      .article-layout { flex-direction: column-reverse; }
+      .article-sidebar { width: 100%; position: static; }
+      .article-hero { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">...</header>
+  <div class="nav-drawer">...</div>
+  <div class="cart-drawer">...</div>
+
+  <main style="padding-top: 100px;">
+    <div class="container">
+      
+      <!-- Breadcrumb -->
+      <div style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: var(--space-md);">
+        <a href="index.html">Home</a> &gt; <a href="guides.html">Beginner Guides</a> &gt; <span style="color: var(--color-secondary);">Your First Hive Setup</span>
+      </div>
+
+      <div class="article-layout">
+        
+        <!-- Sidebar TOC -->
+        <aside class="article-sidebar reveal">
+          <div class="toc-card">
+            <h4 style="margin-bottom: var(--space-sm);">Table of Contents</h4>
+            <a href="#location" class="toc-link active">1. Choosing the Right Location</a>
+            <a href="#equipment" class="toc-link">2. Essential Equipment</a>
+            <a href="#assembly" class="toc-link">3. Assembling the Hive</a>
+            <a href="#installation" class="toc-link">4. Installing the Bees</a>
+            <a href="#first-week" class="toc-link">5. The First Week</a>
+          </div>
+        </aside>
+
+        <!-- Main Article -->
+        <article class="article-content reveal" style="animation-delay: 100ms;">
+          <span class="difficulty-badge" style="background: rgba(56, 161, 105, 0.1); color: var(--color-success); padding: 4px 12px; border-radius: 20px; font-family: var(--font-utility); font-size: 0.8rem; font-weight: 500;">Beginner</span>
+          
+          <h1 style="margin-block: var(--space-sm);">Your First Hive Setup: The Ultimate Guide</h1>
+          
+          <div style="display: flex; gap: var(--space-md); color: var(--color-muted); font-size: 0.9rem; margin-bottom: var(--space-lg);">
+            <span><i class="ph-duotone ph-clock"></i> 10 min read</span>
+            <span><i class="ph-duotone ph-calendar"></i> Updated March 2025</span>
+          </div>
+
+          <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=1000&q=80" alt="Apiary Setup" class="article-hero">
+
+          <p class="lead">Starting your first beehive is an exciting journey. However, proper preparation before the bees arrive is critical. A well-placed, correctly assembled hive sets the foundation for a healthy, thriving colony.</p>
+
+          <h2 id="location">1. Choosing the Right Location</h2>
+          <p>The site you choose for your hive will greatly impact your bees' success and your convenience as a beekeeper.</p>
+          <ul style="list-style: disc; padding-left: 20px; margin-bottom: var(--space-md); font-size: 1.1rem; color: var(--color-secondary);">
+            <li><strong>Sunlight:</strong> Bees prefer morning sun to get them active early. A south or southeast facing entrance is ideal.</li>
+            <li><strong>Wind Protection:</strong> Provide a windbreak against harsh winter winds (e.g., a fence or hedge).</li>
+            <li><strong>Water Source:</strong> Bees need a constant supply of water. If you don't have a natural source nearby, provide a shallow birdbath with stones.</li>
+            <li><strong>Level Ground:</strong> The hive must be level side-to-side, but pitched slightly forward so rain doesn't run into the entrance.</li>
+          </ul>
+
+          <h2 id="equipment">2. Essential Equipment</h2>
+          <p>Before your bees arrive, you need your woodenware ready. A standard starter setup includes:</p>
+          <ul style="list-style: disc; padding-left: 20px; margin-bottom: var(--space-md); font-size: 1.1rem; color: var(--color-secondary);">
+            <li>Bottom board (screened or solid)</li>
+            <li>Entrance reducer</li>
+            <li>One or two deep brood boxes with 10 frames each</li>
+            <li>Inner cover</li>
+            <li>Outer cover (telescoping roof)</li>
+          </ul>
+
+          <h2 id="assembly">3. Assembling the Hive</h2>
+          <p>Most starter kits come unassembled. Use an outdoor-grade wood glue and the provided nails or screws. Ensure all joints are square. Once assembled, you should paint or stain the <strong>outside</strong> of the boxes to protect them from the weather. Never paint the inside; the bees prefer natural wood and will coat it with propolis.</p>
+
+          <h2 id="installation">4. Installing the Bees</h2>
+          <p>Whether you ordered a package (bees in a screened box with a mated queen in a cage) or a nuc (a mini-hive with drawn comb and an active laying queen), installation day is thrilling.</p>
+          <p>For packages: remove 4 frames from the center of your box. Spray the bees lightly with sugar syrup so they can't fly as easily. Remove the queen cage, check she is alive, and wedge her between two central frames. Shake the remaining bees into the gap and replace the outer frames.</p>
+
+          <h2 id="first-week">5. The First Week</h2>
+          <p>Leave the bees alone for 5-7 days! It is tempting to peek, but opening the hive too soon can cause them to abscond (leave). Provide a 1:1 sugar syrup feed continuously to help them draw out the wax foundation. On day 7, do a quick inspection to ensure the queen has been released from her cage and has started laying eggs.</p>
+          
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Related Products (You'll need these) -->
+  <section style="background: var(--color-surface); padding-block: var(--space-xl); margin-top: var(--space-xl);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">You'll need these</h2>
+        <p class="section-subtext">Essential gear mentioned in this guide to get you started.</p>
+      </div>
+      <div class="related-scroll reveal">
+        <div class="product-card">
+          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Hive" class="card-img"></div>
+          <div class="product-card__content">
+            <span class="product-card__category">Equipment</span>
+            <h3 class="product-card__title">Complete Starter Hive Kit</h3>
+            <span class="product-card__price">$145.00</span>
+            <button class="btn btn-outline card-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Suit" class="card-img"></div>
+          <div class="product-card__content">
+            <span class="product-card__category">Protective Gear</span>
+            <h3 class="product-card__title">Ventilated Bee Suit</h3>
+            <span class="product-card__price">$89.00</span>
+            <button class="btn btn-outline card-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Smoker" class="card-img" style="filter: hue-rotate(180deg);"></div>
+          <div class="product-card__content">
+            <span class="product-card__category">Tools</span>
+            <h3 class="product-card__title">Stainless Smoker</h3>
+            <span class="product-card__price">$38.00</span>
+            <button class="btn btn-outline card-btn">Add to Cart</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Gloves" class="card-img" style="filter: sepia(0.5);"></div>
+          <div class="product-card__content">
+            <span class="product-card__category">Protective Gear</span>
+            <h3 class="product-card__title">Vented Goatskin Gloves</h3>
+            <span class="product-card__price">$24.00</span>
+            <button class="btn btn-outline card-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">...</footer>
+  
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Simple Active TOC logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll('.toc-link').forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${entry.target.id}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-100px 0px -66% 0px' });
+
+      document.querySelectorAll('h2[id]').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>

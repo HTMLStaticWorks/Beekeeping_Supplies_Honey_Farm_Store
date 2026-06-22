@@ -1,0 +1,62 @@
+/* ==========================================================================
+   HiveFlow - RTL Overrides
+   ========================================================================== */
+
+html[dir="rtl"] {
+  /* Navigation */
+  .logo {
+    flex-direction: row;
+  }
+  
+  .nav-link::after {
+    left: auto;
+    right: 0;
+  }
+
+  .cart-badge {
+    right: auto;
+    left: 0;
+    transform: translate(-25%, -25%);
+  }
+
+  /* Drawers */
+  .nav-drawer, .cart-drawer {
+    right: auto;
+    left: -100%;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+  }
+
+  .nav-drawer.open, .cart-drawer.open {
+    right: auto;
+    left: 0;
+  }
+
+  /* Product Cards */
+  .product-card__content {
+    align-items: flex-start; /* Ensure left alignment in flex defaults to right in RTL */
+  }
+
+  /* Form Elements */
+  .form-control {
+    text-align: right;
+  }
+  
+  /* Badges */
+  .badge {
+    /* If any specific margins exist */
+  }
+  
+  /* Toggle Switches */
+  .slider:before {
+    left: auto;
+    right: 2px;
+  }
+  input:checked + .slider:before {
+    transform: translateX(-20px);
+  }
+
+  /* Specific Icons */
+  .icon-btn i, .icon-btn svg {
+    /* If directional icons need flipping */
+  }
+}

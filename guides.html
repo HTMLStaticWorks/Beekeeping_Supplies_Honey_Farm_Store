@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beginner Guides - HiveFlow</title>
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    .guides-hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: #fff;
+      padding-block: 120px 80px;
+      text-align: center;
+    }
+    
+    .guides-hero h1 { color: #fff; }
+    
+    .guide-card {
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .guide-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .guide-card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    
+    .guide-card-content {
+      padding: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    
+    .guide-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .difficulty-badge {
+      font-family: var(--font-utility);
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+    .diff-beginner { background: rgba(56, 161, 105, 0.1); color: var(--color-success); }
+    .diff-intermediate { background: rgba(244, 197, 66, 0.15); color: #B7791F; } /* using accent */
+
+    .guide-card-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .guide-card-excerpt {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      margin-bottom: var(--space-md);
+      flex-grow: 1;
+    }
+
+    .featured-guide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      margin-bottom: var(--space-xl);
+    }
+    .featured-guide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 300px;
+    }
+    .featured-guide-content {
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .featured-guide { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">...</header>
+  <div class="nav-drawer">...</div>
+  <div class="cart-drawer">...</div>
+
+  <main style="padding-top: 80px;">
+    
+    <!-- Hero -->
+    <section class="guides-hero">
+      <div class="container reveal">
+        <h1 style="margin-bottom: var(--space-sm);">Start Your Beekeeping Journey</h1>
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Expert advice, step-by-step tutorials, and seasonal tips to help your apiary thrive.</p>
+      </div>
+    </section>
+
+    <section style="padding-top: var(--space-xl);">
+      <div class="container">
+        <!-- Featured Guide -->
+        <div class="featured-guide reveal">
+          <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=1000&q=80" alt="First Hive" class="featured-guide-img">
+          <div class="featured-guide-content">
+            <div class="guide-meta">
+              <span class="difficulty-badge diff-beginner">Beginner</span>
+              <span class="caption"><i class="ph-duotone ph-clock"></i> 10 min read</span>
+            </div>
+            <h2 style="margin-bottom: var(--space-sm);">Your First Hive Setup: The Ultimate Guide</h2>
+            <p style="color: var(--color-muted); margin-bottom: var(--space-md);">Everything you need to know about placing, assembling, and preparing your first Langstroth hive before the bees arrive. Proper site selection can make or break your colony's first year.</p>
+            <a href="guide-single.html" class="btn btn-primary" style="align-self: flex-start;">Read Guide &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Guide Grid -->
+        <div class="grid-3 reveal-stagger">
+          <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=600&q=80" alt="Gear" class="guide-card-img">
+            <div class="guide-card-content">
+              <div class="guide-meta">
+                <span class="difficulty-badge diff-beginner">Beginner</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 8 min read</span>
+              </div>
+              <h3 class="guide-card-title">Protective Gear 101</h3>
+              <p class="guide-card-excerpt">Sorting the essentials from the extras. A comprehensive guide to suits, veils, and gloves to keep you sting-free.</p>
+              <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn);">Read Guide &rarr;</a>
+            </div>
+          </div>
+          
+          <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=600&q=80" alt="Honey" class="guide-card-img">
+            <div class="guide-card-content">
+              <div class="guide-meta">
+                <span class="difficulty-badge diff-intermediate">Intermediate</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 12 min read</span>
+              </div>
+              <h3 class="guide-card-title">Harvesting Honey</h3>
+              <p class="guide-card-excerpt">Step-by-step instructions for safely extracting honey while ensuring your colony has enough stores for winter.</p>
+              <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn);">Read Guide &rarr;</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=600&q=80" alt="Feeding" class="guide-card-img" style="filter: sepia(0.3);">
+            <div class="guide-card-content">
+              <div class="guide-meta">
+                <span class="difficulty-badge diff-beginner">Beginner</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 6 min read</span>
+              </div>
+              <h3 class="guide-card-title">Feeding Your Bees</h3>
+              <p class="guide-card-excerpt">When to feed sugar syrup, pollen patties, and how to spot the signs of a starving colony during nectar dearths.</p>
+              <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn);">Read Guide &rarr;</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=600&q=80" alt="Calendar" class="guide-card-img" style="filter: hue-rotate(90deg);">
+            <div class="guide-card-content">
+              <div class="guide-meta">
+                <span class="difficulty-badge diff-intermediate">Intermediate</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 15 min read</span>
+              </div>
+              <h3 class="guide-card-title">Seasonal Care Calendar</h3>
+              <p class="guide-card-excerpt">A month-by-month breakdown of inspections, treatments, and preparations for a healthy apiary year-round.</p>
+              <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn);">Read Guide &rarr;</a>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=600&q=80" alt="Regulations" class="guide-card-img" style="filter: grayscale(0.5);">
+            <div class="guide-card-content">
+              <div class="guide-meta">
+                <span class="difficulty-badge diff-beginner">Beginner</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 5 min read</span>
+              </div>
+              <h3 class="guide-card-title">Local Regulations Guide</h3>
+              <p class="guide-card-excerpt">Understanding zoning laws, registration requirements, and neighborly etiquette for urban and suburban beekeepers.</p>
+              <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn);">Read Guide &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter reveal" style="background: var(--color-surface); text-align: center; margin-top: var(--space-xl);">
+      <div class="container" style="max-width: 600px;">
+        <h2 style="margin-bottom: var(--space-sm);">Never Miss a Tip</h2>
+        <p style="color: var(--color-muted); margin-bottom: var(--space-lg);">Get seasonal beekeeping advice delivered straight to your inbox.</p>
+        <form class="needs-validation" novalidate style="display: flex; gap: 8px;">
+          <input type="email" class="form-control" placeholder="Enter your email address" required style="flex-grow: 1;">
+          <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">...</footer>
+  
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon - HiveFlow</title>
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    .coming-soon-layout {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      position: relative;
+      background: var(--color-surface);
+      overflow: hidden;
+    }
+    
+    .top-drip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      z-index: 0;
+    }
+    
+    .content-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: var(--weight-h3);
+      color: var(--color-secondary);
+      margin-bottom: var(--space-lg);
+    }
+    .brand-logo svg { width: 40px; height: 40px; fill: var(--color-primary); }
+
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-block: var(--space-xl);
+    }
+    
+    .cd-box {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: var(--space-md);
+      min-width: 100px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    
+    .cd-num {
+      display: block;
+      font-family: var(--font-utility);
+      font-size: 3rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    
+    .cd-label {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 768px) {
+      .countdown-timer { gap: var(--space-sm); flex-wrap: wrap; }
+      .cd-box { min-width: 80px; padding: var(--space-sm); }
+      .cd-num { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="coming-soon-layout">
+      
+      <!-- Animated Top Drip -->
+      <svg class="top-drip honey-drip-svg" viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 0 H1440 V50 C1300 50, 1250 150, 1100 120 C950 90, 900 180, 800 160 C700 140, 650 80, 500 100 C350 120, 250 190, 150 140 C50 90, 20 60, 0 80 V0 Z" fill="var(--color-primary)" opacity="0.8"/>
+        <path d="M0 0 H1440 V30 C1320 30, 1280 120, 1150 90 C1000 60, 950 150, 850 130 C750 110, 700 50, 550 70 C400 90, 300 150, 200 110 C100 70, 50 40, 0 60 V0 Z" fill="var(--color-primary)"/>
+      </svg>
+
+      <div class="content-wrap reveal">
+        
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7.77V16.22L12 22L22 16.22V7.77L12 2Z"/></svg>
+          HiveFlow
+        </div>
+
+        <h1 style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Something sweet is coming.</h1>
+        <p style="font-size: 1.25rem; color: var(--color-muted); margin-top: var(--space-sm);">We're crafting a new experience for beekeepers and honey lovers. Join us soon.</p>
+
+        <div class="countdown-timer">
+          <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Days</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hours</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-minutes">00</span><span class="cd-label">Mins</span></div>
+          <div class="cd-box"><span class="cd-num" id="cd-seconds">00</span><span class="cd-label">Secs</span></div>
+        </div>
+
+        <div style="background: var(--color-bg); padding: var(--space-md); border-radius: var(--radius); border: 1px solid var(--color-border);">
+          <h4 style="margin-bottom: var(--space-sm);">Get Early Access</h4>
+          <form class="needs-validation" novalidate style="display: flex; gap: 8px;">
+            <input type="email" class="form-control" placeholder="Enter your email address" required style="flex-grow: 1;">
+            <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Notify Me</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
