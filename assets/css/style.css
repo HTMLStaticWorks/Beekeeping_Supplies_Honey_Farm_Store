@@ -315,6 +315,17 @@ section {
   color: #fff;
 }
 
+.btn-outline-amber {
+  background: transparent;
+  color: #E8A03C !important;
+  border: 1px solid #E8A03C !important;
+}
+
+.btn-outline-amber:hover {
+  background: #E8A03C !important;
+  color: #3D1F00 !important;
+}
+
 .btn-secondary {
   background: var(--color-surface);
   color: var(--color-secondary);
@@ -1114,4 +1125,62 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(20px);
+}
+
+/* Sidebar Newsletter Button styling */
+.sidebar-newsletter-btn {
+  width: 100%;
+  background: var(--color-secondary);
+  color: var(--color-bg);
+  border: none;
+  font-weight: var(--weight-btn);
+  transition: all var(--transition-base);
+}
+
+.sidebar-newsletter-btn:hover {
+  background: var(--color-accent);
+  color: #3D1F00 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(201, 123, 42, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: opacity var(--transition-base), transform var(--transition-base), background-color var(--transition-base), color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: var(--color-accent);
+  color: #3D1F00;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(201, 123, 42, 0.4);
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 24px;
 }

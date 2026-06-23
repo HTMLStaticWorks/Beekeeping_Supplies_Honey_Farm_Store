@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <title>HiveFlow - Beekeeping Supplies & Honey Farm Store</title>
   <meta name="description"
     content="Premium beekeeping supplies, protective gear, and artisan honey. Ethically sourced and local pickup available.">
@@ -156,9 +157,9 @@
               style="color: var(--color-primary);">natural craft.</span></h1>
           <p class="lead" style="margin-bottom: var(--space-lg); min-height: 32px;"><span
               class="typewriter"></span><span style="animation: blink 1s infinite;">|</span></p>
-          <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: center;">
-            <a href="shop.html" class="btn btn-primary" style="flex: 1; max-width: 220px;">Shop the Hive</a>
-            <a href="#pickup" class="btn btn-outline" style="flex: 1; max-width: 220px;">Find Local Pickup</a>
+          <div class="hero-buttons">
+            <a href="shop.html" class="btn btn-primary">Shop the Hive</a>
+            <a href="#pickup" class="btn btn-outline">Find Local Pickup</a>
           </div>
         </div>
         <div class="hero-image" style="position: relative;">
@@ -171,6 +172,29 @@
         </div>
       </div>
       <style>
+        .hero-buttons {
+          display: flex;
+          gap: var(--space-sm);
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .hero-buttons .btn {
+          flex: 1;
+          max-width: 220px;
+        }
+
+        @media (max-width: 480px) {
+          .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+          }
+          .hero-buttons .btn {
+            width: 100%;
+            max-width: 280px;
+          }
+        }
+
         @keyframes blink {
           50% {
             opacity: 0;
