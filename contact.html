@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - HiveFlow</title>
-  
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <style>
     .contact-hero {
-      background: var(--color-surface);
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: #fff;
+      padding-block: 120px 80px;
       text-align: center;
-      padding-block: 80px 40px;
     }
-    
+
+    .contact-hero h1 {
+      color: #fff;
+    }
+
     .contact-layout {
       display: flex;
       gap: var(--space-xl);
       padding-block: var(--space-xl);
     }
-    
+
     .contact-form-wrap {
       flex: 3;
       background: var(--color-bg);
@@ -31,18 +37,22 @@
 
     .contact-info-wrap {
       flex: 2;
+      text-align: center;
     }
 
     .info-block {
       display: flex;
-      gap: var(--space-sm);
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xs);
       margin-bottom: var(--space-md);
     }
+
     .info-block i {
       font-size: 2rem;
       color: var(--color-primary);
     }
-    
+
     .map-placeholder {
       width: 100%;
       height: 250px;
@@ -55,7 +65,7 @@
       margin-top: var(--space-md);
       overflow: hidden;
     }
-    
+
     .farm-photo {
       width: 100%;
       height: 200px;
@@ -64,53 +74,135 @@
       margin-bottom: var(--space-md);
     }
 
-    @media (max-width: 1024px) {
-      .contact-layout { flex-direction: column; }
+    @media (max-width: 768px) {
+      .contact-layout {
+        flex-direction: column;
+      }
     }
-    
+
     @media (max-width: 360px) {
+
       /* Ensure perfect centering on very small screens */
-      .container { padding-inline: var(--space-xs); }
-      .contact-form-wrap { padding: var(--space-md); text-align: center; }
-      .form-group { text-align: left; } /* Keep labels left-aligned but container centered */
-      .info-block { flex-direction: column; align-items: center; text-align: center; }
+      .container {
+        padding-inline: var(--space-xs);
+      }
+
+      .contact-form-wrap {
+        padding: var(--space-md);
+        text-align: center;
+      }
+
+      .form-group {
+        text-align: left;
+      }
+
+      /* Keep labels left-aligned but container centered */
+      .info-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
     }
   </style>
 </head>
-<body>
 
-  <header class="header">...</header>
-  <div class="nav-drawer">...</div>
+<body>
+  <!-- Header & Navbar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="guides.html" class="nav-link">Beginner Guides</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
+
+        <button class="hamburger" aria-label="Menu">
+          <i class="ph-duotone ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer (Mobile) -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </div>
+      <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" style="color: var(--color-primary)">Home</a>
+        <a href="home2.html" class="drawer-link">Home 2</a>
+        <a href="shop.html" class="drawer-link">Shop</a>
+        <a href="categories.html" class="drawer-link">Categories</a>
+        <a href="guides.html" class="drawer-link">Beginner Guides</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
+      <div class="drawer-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i> RTL
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i> Theme
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="cart-drawer">...</div>
 
   <main style="padding-top: 80px;">
-    
+
     <section class="contact-hero reveal">
       <div class="container">
-        <h1>Get in Touch</h1>
-        <p class="section-subtext">Whether you have a question about your order, need beekeeping advice, or want to arrange a local pickup.</p>
+        <h1 style="margin-bottom: var(--space-sm);">Get in Touch</h1>
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Whether you have a question about
+          your order, need beekeeping advice, or want to arrange a local pickup.</p>
       </div>
     </section>
 
     <section>
       <div class="container contact-layout">
-        
+
         <!-- Contact Form -->
         <div class="contact-form-wrap reveal">
-          <h2 style="margin-bottom: var(--space-md);">Send us a Message</h2>
+          <h2 style="margin-bottom: var(--space-md); text-align: center;">Send us a Message</h2>
           <form class="needs-validation" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
             <div class="form-group">
               <label class="form-label" for="name">Full Name <span class="required">*</span></label>
               <input type="text" id="name" name="name" class="form-control" required>
               <span class="error-msg"></span>
             </div>
-            
+
             <div class="form-group">
               <label class="form-label" for="email">Email Address <span class="required">*</span></label>
               <input type="email" id="email" name="email" class="form-control" required>
               <span class="error-msg"></span>
             </div>
-            
+
             <div class="form-group">
               <label class="form-label" for="subject">Subject <span class="required">*</span></label>
               <select id="subject" name="subject" class="form-control" required>
@@ -122,23 +214,23 @@
               </select>
               <span class="error-msg"></span>
             </div>
-            
+
             <div class="form-group">
               <label class="form-label" for="message">Message <span class="required">*</span></label>
               <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
               <span class="error-msg"></span>
             </div>
-            
+
             <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
           </form>
         </div>
 
-        <!-- Contact Info & Map -->
+        <!-- Contact Info  -->
         <div class="contact-info-wrap reveal" style="animation-delay: 200ms;">
           <h2 style="margin-bottom: var(--space-md);">Find Us</h2>
-          
-          <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Farm Stand" class="farm-photo">
-          
+
+
+
           <div class="info-block">
             <i class="ph-duotone ph-map-pin"></i>
             <div>
@@ -146,12 +238,13 @@
               <p style="color: var(--color-muted); margin-bottom: 0;">123 Amber Lane<br>Meadow Valley, CA 90210</p>
             </div>
           </div>
-          
+
           <div class="info-block">
             <i class="ph-duotone ph-storefront"></i>
             <div>
               <h4 style="margin-bottom: 4px;">Local Pickup Hours</h4>
-              <p style="color: var(--color-muted); margin-bottom: 0;">Thursday - Sunday: 10:00 AM - 4:00 PM<br><em>Please call ahead for large orders.</em></p>
+              <p style="color: var(--color-muted); margin-bottom: 0;">Thursday - Sunday: 10:00 AM - 4:00
+                PM<br><em>Please call ahead for large orders.</em></p>
             </div>
           </div>
 
@@ -163,19 +256,106 @@
             </div>
           </div>
 
-          <!-- Map Placeholder -->
-          <div class="map-placeholder">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000!2d-122.0!3d37.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDAwJzAwLjAiTiAxMjLCsDAwJzAwLjAiVw!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" title="Google Maps Placeholder"></iframe>
+          <div
+            style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border);">
+            <h4 style="margin-bottom: var(--space-sm);">Follow Us</h4>
+            <div style="display: flex; gap: 12px; justify-content: center;">
+              <a href="#" aria-label="Facebook"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-primary); transition: all var(--transition-base);"
+                onmouseover="this.style.background='var(--color-primary)'; this.style.color='#fff'; this.style.borderColor='var(--color-primary)'"
+                onmouseout="this.style.background='var(--color-surface)'; this.style.color='var(--color-primary)'; this.style.borderColor='var(--color-border)'"><i
+                  class="ph-fill ph-facebook-logo" style="font-size: 1.25rem;"></i></a>
+              <a href="#" aria-label="Instagram"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-primary); transition: all var(--transition-base);"
+                onmouseover="this.style.background='var(--color-primary)'; this.style.color='#fff'; this.style.borderColor='var(--color-primary)'"
+                onmouseout="this.style.background='var(--color-surface)'; this.style.color='var(--color-primary)'; this.style.borderColor='var(--color-border)'"><i
+                  class="ph-fill ph-instagram-logo" style="font-size: 1.25rem;"></i></a>
+              <a href="#" aria-label="Twitter"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-primary); transition: all var(--transition-base);"
+                onmouseover="this.style.background='var(--color-primary)'; this.style.color='#fff'; this.style.borderColor='var(--color-primary)'"
+                onmouseout="this.style.background='var(--color-surface)'; this.style.color='var(--color-primary)'; this.style.borderColor='var(--color-border)'"><i
+                  class="ph-fill ph-twitter-logo" style="font-size: 1.25rem;"></i></a>
+              <a href="#" aria-label="YouTube"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-primary); transition: all var(--transition-base);"
+                onmouseover="this.style.background='var(--color-primary)'; this.style.color='#fff'; this.style.borderColor='var(--color-primary)'"
+                onmouseout="this.style.background='var(--color-surface)'; this.style.color='var(--color-primary)'; this.style.borderColor='var(--color-border)'"><i
+                  class="ph-fill ph-youtube-logo" style="font-size: 1.25rem;"></i></a>
+            </div>
           </div>
 
         </div>
+
       </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="contact-map-section reveal" style="padding-block: 0; line-height: 0;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000!2d-122.0!3d37.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDAwJzAwLjAiTiAxMjLCsDAwJzAwLjAiVw!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+        width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy"
+        title="Google Maps Location"></iframe>
     </section>
 
   </main>
 
-  <footer class="footer">...</footer>
-  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-sm);">
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <div class="footer-links">
+            <a href="shop.html">All Products</a>
+            <a href="categories.html">Hive Equipment</a>
+            <a href="categories.html">Protective Gear</a>
+            <a href="categories.html">Artisan Honey</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <div class="footer-links">
+            <a href="guides.html">Beginner Guides</a>
+            <a href="guide-single.html">Your First Hive</a>
+            <a href="guide-single.html">Harvesting Guide</a>
+            <a href="blog.html">Blog & News</a>
+            <a href="contact.html">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

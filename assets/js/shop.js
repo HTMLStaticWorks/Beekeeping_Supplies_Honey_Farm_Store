@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const icon = btn.querySelector('i');
       if (icon) {
-        if (icon.classList.contains('ph-heart')) {
-          icon.classList.remove('ph-heart');
-          icon.classList.add('ph-heart-fill');
+        if (icon.classList.contains('ph-duotone')) {
+          icon.classList.remove('ph-duotone');
+          icon.classList.add('ph-fill');
           icon.style.color = 'var(--color-primary)';
         } else {
-          icon.classList.remove('ph-heart-fill');
-          icon.classList.add('ph-heart');
+          icon.classList.remove('ph-fill');
+          icon.classList.add('ph-duotone');
           icon.style.color = '';
         }
       }

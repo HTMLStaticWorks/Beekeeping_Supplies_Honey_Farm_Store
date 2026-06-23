@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog & News - HiveFlow</title>
-  
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -14,9 +15,11 @@
       gap: var(--space-xl);
       padding-block: var(--space-xl);
     }
-    
-    .blog-main { flex-grow: 1; }
-    
+
+    .blog-main {
+      flex-grow: 1;
+    }
+
     .blog-sidebar {
       width: 300px;
       flex-shrink: 0;
@@ -37,6 +40,7 @@
       display: flex;
       flex-direction: column;
     }
+
     .blog-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-hover);
@@ -53,6 +57,12 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      text-align: center;
+      align-items: center;
+    }
+
+    .blog-card-content .blog-meta {
+      justify-content: center;
     }
 
     .blog-meta {
@@ -78,7 +88,12 @@
       padding: var(--space-md);
       margin-bottom: var(--space-md);
     }
-    .sidebar-widget h4 { margin-bottom: var(--space-sm); border-bottom: 1px solid var(--color-border); padding-bottom: 8px; }
+
+    .sidebar-widget h4 {
+      margin-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 8px;
+    }
 
     .widget-link {
       display: block;
@@ -86,100 +101,284 @@
       padding-block: 6px;
       transition: color 0.2s;
     }
-    .widget-link:hover { color: var(--color-primary); }
+
+    .widget-link:hover {
+      color: var(--color-primary);
+    }
 
     .recent-post {
       display: flex;
       gap: 12px;
       margin-bottom: 12px;
     }
-    .recent-post img { width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius); }
-    .recent-post h5 { font-size: 0.95rem; margin-bottom: 4px; line-height: 1.2; }
-    .recent-post span { font-size: 0.8rem; color: var(--color-muted); }
+
+    .recent-post img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+
+    .recent-post h5 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .recent-post span {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
 
     @media (max-width: 1024px) {
-      .blog-layout { flex-direction: column; }
-      .blog-sidebar { width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
-      .sidebar-widget { margin-bottom: 0; }
+      .blog-layout {
+        flex-direction: column-reverse;
+      }
+
+      .blog-sidebar {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+      }
+
+      .sidebar-widget {
+        margin-bottom: 0;
+      }
     }
+
     @media (max-width: 768px) {
-      .blog-grid { grid-template-columns: 1fr; }
-      .blog-sidebar { grid-template-columns: 1fr; }
+      /* Keep 2 columns blog-grid on 768px view */
+    }
+
+    @media (max-width: 480px) {
+
+      .blog-sidebar,
+      .blog-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .blog-hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: #fff;
+      padding-block: 120px 80px;
+      text-align: center;
+    }
+
+    .blog-hero h1 {
+      color: #fff;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-badge {
+      padding: 6px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      font-family: var(--font-utility);
+      transition: all var(--transition-base);
+    }
+
+    .tag-badge:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      background: rgba(201, 123, 42, 0.05);
+    }
+
+    .blog-read-link {
+      color: var(--color-primary) !important;
+      font-weight: var(--weight-btn);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all var(--transition-base);
+    }
+
+    .blog-read-link:hover {
+      color: var(--color-secondary) !important;
+      transform: translateX(4px);
     }
   </style>
 </head>
-<body>
 
-  <header class="header">...</header>
-  <div class="nav-drawer">...</div>
+<body>
+  <!-- Header & Navbar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="guides.html" class="nav-link">Beginner Guides</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
+
+        <button class="hamburger" aria-label="Menu">
+          <i class="ph-duotone ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer (Mobile) -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </div>
+      <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" style="color: var(--color-primary)">Home</a>
+        <a href="home2.html" class="drawer-link">Home 2</a>
+        <a href="shop.html" class="drawer-link">Shop</a>
+        <a href="categories.html" class="drawer-link">Categories</a>
+        <a href="guides.html" class="drawer-link">Beginner Guides</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
+      <div class="drawer-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i> RTL
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i> Theme
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="cart-drawer">...</div>
 
-  <main style="padding-top: 100px;">
-    <div class="container">
-      
-      <div class="section-header reveal" style="text-align: left; align-items: flex-start; margin-bottom: 0;">
-        <h1>Blog & Farm News</h1>
-        <p class="section-subtext" style="margin-inline: 0; text-align: left;">Stories from the apiary, delicious honey recipes, and updates from the farm.</p>
+  <main style="padding-top: 80px;">
+
+    <!-- Hero -->
+    <section class="blog-hero">
+      <div class="container reveal">
+        <h1 style="margin-bottom: var(--space-sm);">Blog & Farm News</h1>
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Stories from the apiary, delicious
+          honey recipes, and updates from the farm.</p>
       </div>
+    </section>
+
+    <div class="container">
 
       <div class="blog-layout">
         <div class="blog-main reveal">
           <div class="blog-grid">
-            
+
+            <!-- Blog 1 — reuse from blog.html — 800×450px -->
             <article class="blog-card">
-              <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Honey Recipes" class="blog-card-img"></a>
+              <a href="blog-single.html">
+                <img src="assets/images/blog-spring-honey-recipes.jpg" alt="Spring baking with raw wildflower honey"
+                  class="blog-card-img">
+              </a>
               <div class="blog-card-content">
                 <div class="blog-meta">
                   <span style="color: var(--color-primary);">Recipes</span>
                   <span>March 15, 2025</span>
                 </div>
-                <a href="blog-single.html"><h3 class="blog-card-title">5 Spring Recipes Using Raw Wildflower Honey</h3></a>
-                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">Elevate your spring baking and cooking with these simple recipes that let the delicate floral notes of our raw wildflower honey shine.</p>
-                <a href="blog-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read More <i class="ph-bold ph-arrow-right"></i></a>
+                <a href="blog-single.html">
+                  <h3 class="blog-card-title">5 Spring Recipes Using Raw Wildflower Honey</h3>
+                </a>
+                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">
+                  Elevate your spring baking and cooking with these simple recipes that let the delicate floral notes of
+                  our raw wildflower honey shine.</p>
+                <a href="blog-single.html" class="blog-read-link">Read More <i class="ph-bold ph-arrow-right"></i></a>
               </div>
             </article>
 
+            <!-- Blog 2 — reuse from blog.html — 800×450px -->
             <article class="blog-card">
-              <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Beekeeping" class="blog-card-img" style="filter: hue-rotate(45deg);"></a>
+              <a href="blog-single.html">
+                <img src="assets/images/blog-spring-nectar-flow.jpg"
+                  alt="Beekeeper inspecting hives during spring nectar flow amid cherry blossoms" class="blog-card-img">
+              </a>
               <div class="blog-card-content">
                 <div class="blog-meta">
                   <span style="color: var(--color-primary);">Beekeeping Tips</span>
                   <span>March 02, 2025</span>
                 </div>
-                <a href="blog-single.html"><h3 class="blog-card-title">Preparing Your Hives for the Spring Nectar Flow</h3></a>
-                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">As the weather warms, your colonies will rapidly expand. Here's how to prevent swarming and prepare for the main nectar flow.</p>
-                <a href="blog-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read More <i class="ph-bold ph-arrow-right"></i></a>
+                <a href="blog-single.html">
+                  <h3 class="blog-card-title">Preparing Your Hives for the Spring Nectar Flow</h3>
+                </a>
+                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">
+                  As the weather warms, your colonies will rapidly expand. Here's how to prevent swarming and prepare
+                  for the main nectar flow.</p>
+                <a href="blog-single.html" class="blog-read-link">Read More <i class="ph-bold ph-arrow-right"></i></a>
               </div>
             </article>
 
+            <!-- Blog 3 — reuse from blog.html — 800×450px -->
             <article class="blog-card">
-              <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Farm News" class="blog-card-img" style="filter: saturate(0.5);"></a>
+              <a href="blog-single.html">
+                <img src="assets/images/blog-pollinator-garden.jpg"
+                  alt="Expanding native wildflower pollinator garden with beehives" class="blog-card-img">
+              </a>
               <div class="blog-card-content">
                 <div class="blog-meta">
                   <span style="color: var(--color-primary);">Farm News</span>
                   <span>February 18, 2025</span>
                 </div>
-                <a href="blog-single.html"><h3 class="blog-card-title">We're Expanding Our Pollinator Garden</h3></a>
-                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">Thanks to your support, we are planting an additional 2 acres of native wildflowers this spring to support our local bee populations.</p>
-                <a href="blog-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read More <i class="ph-bold ph-arrow-right"></i></a>
+                <a href="blog-single.html">
+                  <h3 class="blog-card-title">We're Expanding Our Pollinator Garden</h3>
+                </a>
+                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">
+                  Thanks to your support, we are planting an additional 2 acres of native wildflowers this spring to
+                  support our local bee populations.</p>
+                <a href="blog-single.html" class="blog-read-link">Read More <i class="ph-bold ph-arrow-right"></i></a>
               </div>
             </article>
 
+            <!-- Blog 4 — NEW — Render Beeswax — 800×450px -->
             <article class="blog-card">
-              <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Beeswax" class="blog-card-img"></a>
+              <a href="blog-single.html">
+                <img src="assets/images/blog-render-beeswax.jpg"
+                  alt="Melting old honeycomb to render clean beeswax through cheesecloth" class="blog-card-img">
+              </a>
               <div class="blog-card-content">
                 <div class="blog-meta">
                   <span style="color: var(--color-primary);">Crafts</span>
                   <span>January 24, 2025</span>
                 </div>
-                <a href="blog-single.html"><h3 class="blog-card-title">How to Render Beeswax from Old Comb</h3></a>
-                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">Don't throw away that old, dark comb! Learn how to safely melt and filter it into clean beeswax blocks for candles and balms.</p>
-                <a href="blog-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read More <i class="ph-bold ph-arrow-right"></i></a>
+                <a href="blog-single.html">
+                  <h3 class="blog-card-title">How to Render Beeswax from Old Comb</h3>
+                </a>
+                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md); flex-grow: 1;">
+                  Don't throw away that old, dark comb! Learn how to safely melt and filter it into clean beeswax blocks
+                  for candles and balms.</p>
+                <a href="blog-single.html" class="blog-read-link">Read More <i class="ph-bold ph-arrow-right"></i></a>
               </div>
             </article>
 
           </div>
-          
+
           <div style="display: flex; justify-content: center; gap: 8px; margin-top: var(--space-xl);">
             <button class="btn btn-primary" style="padding: 8px 16px;">1</button>
             <button class="btn btn-outline" style="padding: 8px 16px;">2</button>
@@ -188,9 +387,9 @@
         </div>
 
         <aside class="blog-sidebar reveal" style="animation-delay: 200ms;">
-          
+
           <div class="sidebar-widget">
-            <h4>Categories</h4>
+            <h4 style="text-align: center;">Categories</h4>
             <a href="#" class="widget-link">Beekeeping Tips (12)</a>
             <a href="#" class="widget-link">Recipes (8)</a>
             <a href="#" class="widget-link">Farm News (5)</a>
@@ -198,36 +397,63 @@
           </div>
 
           <div class="sidebar-widget">
-            <h4>Recent Posts</h4>
+            <h4 style="text-align: center;">Recent Posts</h4>
+
+            <!-- Reuse: blog-spring-honey-recipes.jpg -->
             <div class="recent-post">
-              <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=200&q=80" alt="Thumb">
+              <img src="assets/images/blog-spring-honey-recipes.jpg" alt="5 Spring Recipes Using Raw Honey">
               <div>
-                <a href="blog-single.html" style="color: var(--color-secondary);"><h5>5 Spring Recipes Using Raw Honey</h5></a>
+                <a href="blog-single.html" style="color: var(--color-secondary);">
+                  <h5>5 Spring Recipes Using Raw Honey</h5>
+                </a>
                 <span>March 15, 2025</span>
               </div>
             </div>
+
+            <!-- Reuse: blog-spring-nectar-flow.jpg -->
             <div class="recent-post">
-              <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=200&q=80" alt="Thumb">
+              <img src="assets/images/blog-spring-nectar-flow.jpg" alt="Preparing Hives for Nectar Flow">
               <div>
-                <a href="blog-single.html" style="color: var(--color-secondary);"><h5>Preparing Hives for Nectar Flow</h5></a>
+                <a href="blog-single.html" style="color: var(--color-secondary);">
+                  <h5>Preparing Hives for Nectar Flow</h5>
+                </a>
                 <span>March 02, 2025</span>
               </div>
             </div>
+
+            <!-- Reuse: blog-pollinator-garden.jpg -->
             <div class="recent-post">
-              <img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=200&q=80" alt="Thumb">
+              <img src="assets/images/blog-pollinator-garden.jpg" alt="Expanding Pollinator Garden">
               <div>
-                <a href="blog-single.html" style="color: var(--color-secondary);"><h5>Expanding Pollinator Garden</h5></a>
+                <a href="blog-single.html" style="color: var(--color-secondary);">
+                  <h5>Expanding Pollinator Garden</h5>
+                </a>
                 <span>February 18, 2025</span>
               </div>
             </div>
+
           </div>
 
-          <div class="sidebar-widget" style="text-align: center; background: var(--color-primary); color: #fff; border: none;">
+          <div class="sidebar-widget">
+            <h4 style="text-align: center;">Popular Tags</h4>
+            <div class="tag-cloud">
+              <a href="#" class="tag-badge">Honey</a>
+              <a href="#" class="tag-badge">Hives</a>
+              <a href="#" class="tag-badge">Beginners</a>
+              <a href="#" class="tag-badge">Gardening</a>
+              <a href="#" class="tag-badge">Recipes</a>
+              <a href="#" class="tag-badge">Beeswax</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget"
+            style="text-align: center; background: var(--color-primary); color: #fff; border: none;">
             <h4 style="color: #fff; border-color: rgba(255,255,255,0.2);">Newsletter</h4>
             <p style="font-size: 0.9rem; margin-bottom: var(--space-sm);">Get seasonal tips and farm news.</p>
             <form class="needs-validation" novalidate>
               <input type="email" class="form-control" placeholder="Email address" required style="margin-bottom: 8px;">
-              <button type="submit" class="btn" style="width: 100%; background: var(--color-secondary); color: #fff;">Subscribe</button>
+              <button type="submit" class="btn"
+                style="width: 100%; background: var(--color-secondary); color: #fff;">Subscribe</button>
             </form>
           </div>
 
@@ -237,8 +463,63 @@
     </div>
   </main>
 
-  <footer class="footer">...</footer>
-  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-sm);">
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <div class="footer-links">
+            <a href="shop.html">All Products</a>
+            <a href="categories.html">Hive Equipment</a>
+            <a href="categories.html">Protective Gear</a>
+            <a href="categories.html">Artisan Honey</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <div class="footer-links">
+            <a href="guides.html">Beginner Guides</a>
+            <a href="guide-single.html">Your First Hive</a>
+            <a href="guide-single.html">Harvesting Guide</a>
+            <a href="blog.html">Blog & News</a>
+            <a href="contact.html">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

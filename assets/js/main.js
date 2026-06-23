@@ -108,8 +108,36 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawers);
 
+  // Active Page Highlighting
+  const path = window.location.pathname;
+  let page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+  
+  if (page === 'blog-single.html') page = 'blog.html';
+  if (page === 'product-single.html') page = 'shop.html';
+  if (page === 'guide-single.html') page = 'guides.html';
+
+  const navLinks = document.querySelectorAll('.nav-links .nav-link');
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === page) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  const drawerLinks = document.querySelectorAll('.drawer-links .drawer-link');
+  drawerLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === page) {
+      link.style.color = 'var(--color-primary)';
+    } else {
+      link.style.color = '';
+    }
+  });
+
   // Sticky Header Morph
-  const header = document.querySelector('.navbar');
+  const header = document.querySelector('.header');
   if (header) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
@@ -306,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           carousel.scrollBy({ left: itemWidth, behavior: 'smooth' });
         }
-      }, 4000);
+      }, 3000);
     };
 
     startScroll();

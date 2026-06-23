@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preparing Your Hives for the Spring Nectar Flow - HiveFlow</title>
-  
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -14,7 +15,7 @@
       max-width: 800px;
       margin: 0 auto var(--space-xl);
     }
-    
+
     .blog-single-hero {
       width: 100%;
       height: 400px;
@@ -28,8 +29,16 @@
       margin: 0 auto;
     }
 
-    .blog-single-content h2 { margin-top: var(--space-xl); margin-bottom: var(--space-sm); }
-    .blog-single-content p { font-size: 1.15rem; margin-bottom: var(--space-md); }
+    .blog-single-content h2 {
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+    }
+
+    .blog-single-content p {
+      font-size: 1.15rem;
+      margin-bottom: var(--space-md);
+    }
+
     .blog-single-content blockquote {
       font-family: var(--font-display);
       font-size: 1.5rem;
@@ -50,6 +59,7 @@
       margin-top: var(--space-xl);
       border: 1px solid var(--color-border);
     }
+
     .author-bio img {
       width: 80px;
       height: 80px;
@@ -68,55 +78,140 @@
     }
 
     @media (max-width: 768px) {
-      .blog-single-hero { height: 250px; }
-      .author-bio { flex-direction: column; text-align: center; }
+      .blog-single-hero {
+        height: 250px;
+      }
+
+      .author-bio {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header class="header">...</header>
-  <div class="nav-drawer">...</div>
+  <!-- Header & Navbar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="guides.html" class="nav-link">Beginner Guides</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
+
+        <button class="hamburger" aria-label="Menu">
+          <i class="ph-duotone ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer (Mobile) -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </div>
+      <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" style="color: var(--color-primary)">Home</a>
+        <a href="home2.html" class="drawer-link">Home 2</a>
+        <a href="shop.html" class="drawer-link">Shop</a>
+        <a href="categories.html" class="drawer-link">Categories</a>
+        <a href="guides.html" class="drawer-link">Beginner Guides</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
+      <div class="drawer-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i> RTL
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i> Theme
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="cart-drawer">...</div>
 
-  <main style="padding-top: 100px;">
+  <main style="padding-top: 100px; padding-bottom: var(--space-xl);">
     <div class="container">
-      
+
       <!-- Breadcrumb -->
       <div style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: var(--space-md);">
-        <a href="index.html">Home</a> &gt; <a href="blog.html">Blog</a> &gt; <span style="color: var(--color-secondary);">Preparing Your Hives...</span>
+        <a href="index.html">Home</a> &gt; <a href="blog.html">Blog</a> &gt; <span
+          style="color: var(--color-secondary);">Preparing Your Hives...</span>
       </div>
 
       <article class="reveal">
         <header class="blog-single-header">
-          <span class="badge" style="background: var(--color-primary); margin-bottom: var(--space-sm);">Beekeeping Tips</span>
+          <span class="badge" style="background: var(--color-primary); margin-bottom: var(--space-sm);">Beekeeping
+            Tips</span>
           <h1 style="margin-bottom: var(--space-sm);">Preparing Your Hives for the Spring Nectar Flow</h1>
-          <div style="color: var(--color-muted); font-family: var(--font-utility); display: flex; justify-content: center; gap: 16px;">
+          <div
+            style="color: var(--color-muted); font-family: var(--font-utility); display: flex; justify-content: center; gap: 16px;">
             <span>By Emma Davis</span>
             <span>&bull;</span>
             <span>March 02, 2025</span>
           </div>
         </header>
 
-        <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=1200&q=80" alt="Hives in spring" class="blog-single-hero" style="filter: hue-rotate(45deg);">
+        <img src="assets/images/blog-hero-spring-nectar-flow.jpg"
+          alt="Row of beehives in a spring meadow with dandelions and clover in bloom" class="blog-single-hero">
+
 
         <div class="blog-single-content">
-          <p class="lead">As the weather warms and the first dandelions push through the soil, your colonies will begin to rapidly expand. Proper management during this crucial window can mean the difference between a record honey harvest and a swarming colony.</p>
+          <p class="lead">As the weather warms and the first dandelions push through the soil, your colonies will begin
+            to rapidly expand. Proper management during this crucial window can mean the difference between a record
+            honey harvest and a swarming colony.</p>
 
           <h2>1. Early Spring Inspections</h2>
-          <p>Once temperatures consistently stay above 55°F (13°C) on sunny, calm days, it’s time for your first thorough inspection. You are looking for three main things: food stores, the presence of a laying queen, and disease.</p>
-          <p>If the hive feels light when you lift the back end, you need to feed them immediately. A 1:1 sugar syrup mimics early nectar and stimulates the queen to lay.</p>
+          <p>Once temperatures consistently stay above 55°F (13°C) on sunny, calm days, it’s time for your first
+            thorough inspection. You are looking for three main things: food stores, the presence of a laying queen, and
+            disease.</p>
+          <p>If the hive feels light when you lift the back end, you need to feed them immediately. A 1:1 sugar syrup
+            mimics early nectar and stimulates the queen to lay.</p>
 
           <blockquote>
-            "Spring management is about staying one step ahead of the bees. If they feel crowded, they will swarm before the flow even begins."
+            "Spring management is about staying one step ahead of the bees. If they feel crowded, they will swarm before
+            the flow even begins."
           </blockquote>
 
           <h2>2. Swarm Prevention</h2>
-          <p>Swarming is the natural reproductive method for honey bees, but for a beekeeper, it means losing half your workforce right before they need to gather honey. To prevent this, you must provide space.</p>
-          <p>Check the brood nest. If the queen is running out of empty cells to lay eggs, you need to add another box or "checkerboard" empty frames between drawn ones.</p>
+          <p>Swarming is the natural reproductive method for honey bees, but for a beekeeper, it means losing half your
+            workforce right before they need to gather honey. To prevent this, you must provide space.</p>
+          <p>Check the brood nest. If the queen is running out of empty cells to lay eggs, you need to add another box
+            or "checkerboard" empty frames between drawn ones.</p>
 
           <h2>3. Adding Supers</h2>
-          <p>When the dandelion bloom is in full swing, the main nectar flow is usually right around the corner. Add your honey supers before you think you need to. A good rule of thumb: when the uppermost brood box is 70% drawn and covered with bees, it's time to super.</p>
+          <p>When the dandelion bloom is in full swing, the main nectar flow is usually right around the corner. Add
+            your honey supers before you think you need to. A good rule of thumb: when the uppermost brood box is 70%
+            drawn and covered with bees, it's time to super.</p>
 
           <div class="social-share">
             <span style="font-weight: var(--weight-label); margin-right: auto;">Share this post:</span>
@@ -126,10 +221,13 @@
           </div>
 
           <div class="author-bio">
-            <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=200&q=80" alt="Emma Davis">
+            <img src="assets/images/avatar-emma.jpg" alt="Emma Davis"
+              style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--color-primary);">
             <div>
               <h4 style="margin-bottom: 4px;">Emma Davis</h4>
-              <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 0;">Emma is the master beekeeper at HiveFlow Farm. She has over 15 years of experience managing colonies and is passionate about sustainable apiary practices.</p>
+              <p style="font-size: 0.95rem; color: var(--color-muted); margin-bottom: 0;">Emma is the master beekeeper
+                at HiveFlow Farm. She has over 15 years of experience managing colonies and is passionate about
+                sustainable apiary practices.</p>
             </div>
           </div>
 
@@ -139,48 +237,65 @@
     </div>
   </main>
 
-  <section style="background: var(--color-surface); padding-block: var(--space-xl); margin-top: var(--space-xl);">
+
+
+  <footer class="footer">
     <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-title">Related Posts</h2>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-sm);">
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <div class="footer-links">
+            <a href="shop.html">All Products</a>
+            <a href="categories.html">Hive Equipment</a>
+            <a href="categories.html">Protective Gear</a>
+            <a href="categories.html">Artisan Honey</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <div class="footer-links">
+            <a href="guides.html">Beginner Guides</a>
+            <a href="guide-single.html">Your First Hive</a>
+            <a href="guide-single.html">Harvesting Guide</a>
+            <a href="blog.html">Blog & News</a>
+            <a href="contact.html">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
+          </div>
+        </div>
       </div>
-      <div class="grid-3 reveal-stagger">
-        <article class="blog-card">
-          <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Honey Recipes" class="blog-card-img"></a>
-          <div class="blog-card-content">
-            <div class="blog-meta">
-              <span style="color: var(--color-primary);">Recipes</span>
-              <span>March 15, 2025</span>
-            </div>
-            <a href="blog-single.html"><h3 class="blog-card-title">5 Spring Recipes Using Raw Wildflower Honey</h3></a>
-          </div>
-        </article>
-        <article class="blog-card">
-          <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Farm News" class="blog-card-img" style="filter: saturate(0.5);"></a>
-          <div class="blog-card-content">
-            <div class="blog-meta">
-              <span style="color: var(--color-primary);">Farm News</span>
-              <span>February 18, 2025</span>
-            </div>
-            <a href="blog-single.html"><h3 class="blog-card-title">We're Expanding Our Pollinator Garden</h3></a>
-          </div>
-        </article>
-        <article class="blog-card">
-          <a href="blog-single.html"><img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Beeswax" class="blog-card-img"></a>
-          <div class="blog-card-content">
-            <div class="blog-meta">
-              <span style="color: var(--color-primary);">Crafts</span>
-              <span>January 24, 2025</span>
-            </div>
-            <a href="blog-single.html"><h3 class="blog-card-title">How to Render Beeswax from Old Comb</h3></a>
-          </div>
-        </article>
+
+      <div class="footer-bottom">
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
       </div>
     </div>
-  </section>
+  </footer>
 
-  <footer class="footer">...</footer>
-  
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

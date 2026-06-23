@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categories - HiveFlow</title>
-  
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
   <style>
+    .categories-hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: #fff;
+      padding-block: 120px 80px;
+      text-align: center;
+    }
+
+    .categories-hero h1 {
+      color: #fff;
+    }
+
     .category-stack-hero {
       position: relative;
       padding-block: var(--space-xl);
@@ -20,16 +32,17 @@
       justify-content: center;
       background-size: cover;
       background-position: center;
-      background-attachment: fixed; /* Parallax effect */
+      background-attachment: fixed;
+      /* Parallax effect */
     }
-    
+
     .category-stack-hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.6);
     }
-    
+
     .category-stack-content {
       position: relative;
       z-index: 1;
@@ -49,167 +62,378 @@
       gap: var(--space-sm);
       margin-top: var(--space-md);
     }
-    
+
     .sub-category-tag {
       padding: 6px 16px;
-      border: 1px solid rgba(255,255,255,0.3);
+      border: 1px solid var(--color-border);
+      color: var(--color-secondary);
       border-radius: 20px;
       font-family: var(--font-utility);
       font-size: 0.9rem;
-      transition: background var(--transition-base);
+      transition: all var(--transition-base);
     }
+
     .sub-category-tag:hover {
       background: var(--color-primary);
       border-color: var(--color-primary);
+      color: #fff;
+    }
+
+    /* Responsive overrides for category product grids */
+    @media (max-width: 1024px) {
+      .category-stack-products .grid-3 {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .category-stack-products .grid-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .category-stack-products .grid-3 .product-card:nth-child(3) {
+        grid-column: span 2;
+        justify-self: center;
+        width: calc(50% - (var(--space-md) / 2));
+      }
+    }
+
+    @media (max-width: 480px) {
+      .category-stack-products .grid-3 {
+        grid-template-columns: 1fr !important;
+      }
+
+      .category-stack-products .grid-3 .product-card:nth-child(3) {
+        grid-column: auto;
+        width: 100%;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header class="header">...</header>
-  <div class="nav-drawer">...</div>
+  <!-- Header & Navbar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="guides.html" class="nav-link">Beginner Guides</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
+
+        <button class="hamburger" aria-label="Menu">
+          <i class="ph-duotone ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer (Mobile) -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </div>
+      <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" style="color: var(--color-primary)">Home</a>
+        <a href="home2.html" class="drawer-link">Home 2</a>
+        <a href="shop.html" class="drawer-link">Shop</a>
+        <a href="categories.html" class="drawer-link">Categories</a>
+        <a href="guides.html" class="drawer-link">Beginner Guides</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
+      <div class="drawer-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i> RTL
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i> Theme
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="cart-drawer">...</div>
 
   <main style="padding-top: 80px;">
-    
-    <!-- Category 1: Hive Equipment -->
-    <section class="category-stack-hero" style="background-image: url('https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=1600&q=80');">
-      <div class="category-stack-content reveal">
-        <h1 style="color: #fff; margin-bottom: var(--space-sm);">Hive Equipment</h1>
-        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--space-md);">Everything from 10-frame Langstroth kits to precision smokers and hive tools. Built to last through seasons of nectar flows.</p>
-        <a href="shop.html" class="btn btn-primary">Browse Equipment &rarr;</a>
+
+    <!-- Hero -->
+    <section class="categories-hero">
+      <div class="container reveal">
+        <h1 style="margin-bottom: var(--space-sm);">Shop By Category</h1>
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Explore our curated selection of
+          high-quality hive equipment, protective gear, and local raw artisan honey.</p>
       </div>
     </section>
-    <div class="category-stack-products">
+
+    <!-- Category 1: Hive Equipment -->
+    <div class="category-stack-products" style="padding-top: var(--space-lg);">
       <div class="container">
+        <div class="reveal" style="text-align: center; margin-bottom: var(--space-md);">
+          <h2 style="font-size: 2.2rem; margin-bottom: var(--space-xs);">Hive Equipment</h2>
+          <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Everything from 10-frame Langstroth
+            kits to precision smokers and hive tools. Built to last through seasons of nectar flows.</p>
+        </div>
         <div class="grid-3 reveal-stagger">
+
+          <!-- Product 1 — Starter Hive Kit — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Hive" class="card-img"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-starter-hive-kit.jpg" alt="Starter Hive Kit" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Equipment</span>
-              <a href="product-single.html"><h3 class="product-card__title">Starter Hive Kit</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Starter Hive Kit</h3>
+              </a>
               <span class="product-card__price">$145.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
+          <!-- Product 2 — Deep Frames Pack of 10 — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Frames" class="card-img" style="filter: hue-rotate(45deg);"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-deep-frames.jpg" alt="Deep Frames Pack of 10" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Frames & Foundation</span>
-              <a href="product-single.html"><h3 class="product-card__title">Deep Frames (Pack of 10)</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Deep Frames (Pack of 10)</h3>
+              </a>
               <span class="product-card__price">$32.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
+          <!-- Product 3 — Stainless Smoker — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Smoker" class="card-img" style="filter: hue-rotate(180deg);"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-stainless-smoker.jpg" alt="Stainless Smoker" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Tools</span>
-              <a href="product-single.html"><h3 class="product-card__title">Stainless Smoker</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Stainless Smoker</h3>
+              </a>
               <span class="product-card__price">$38.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
     <!-- Category 2: Protective Gear -->
-    <section class="category-stack-hero" style="background-image: url('https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=1600&q=80');">
-      <div class="category-stack-content reveal">
-        <h1 style="color: #fff; margin-bottom: var(--space-sm);">Protective Gear</h1>
-        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--space-md);">Stay safe and comfortable during your inspections. Ventilated suits, goatskin gloves, and clear-view veils.</p>
-        <a href="shop.html" class="btn btn-primary">Browse Gear &rarr;</a>
-      </div>
-    </section>
-    <div class="category-stack-products" style="background: var(--color-bg);">
+    <div class="category-stack-products" style="padding-top: var(--space-lg); background: var(--color-bg);">
       <div class="container">
+        <div class="reveal" style="text-align: center; margin-bottom: var(--space-md);">
+          <h2 style="font-size: 2.2rem; margin-bottom: var(--space-xs);">Protective Gear</h2>
+          <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Stay safe and comfortable during your
+            inspections. Ventilated suits, goatskin gloves, and clear-view veils.</p>
+        </div>
         <div class="grid-3 reveal-stagger">
+
+          <!-- Product 1 — Ventilated Bee Suit — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Suit" class="card-img"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-gear-ventilated-suit.jpg" alt="Ventilated Bee Suit" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Suits</span>
-              <a href="product-single.html"><h3 class="product-card__title">Ventilated Bee Suit</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Ventilated Bee Suit</h3>
+              </a>
               <span class="product-card__price">$89.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
+          <!-- Product 2 — Vented Goatskin Gloves — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Gloves" class="card-img" style="filter: sepia(0.5);"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-gear-goatskin-gloves.jpg" alt="Vented Goatskin Gloves" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Gloves</span>
-              <a href="product-single.html"><h3 class="product-card__title">Vented Goatskin Gloves</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Vented Goatskin Gloves</h3>
+              </a>
               <span class="product-card__price">$24.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
+          <!-- Product 3 — Half-Zip Beekeeper Jacket — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Jacket" class="card-img" style="filter: saturate(0.2);"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-gear-beekeeper-jacket.jpg" alt="Half-Zip Beekeeper Jacket" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Jackets</span>
-              <a href="product-single.html"><h3 class="product-card__title">Half-Zip Beekeeper Jacket</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Half-Zip Beekeeper Jacket</h3>
+              </a>
               <span class="product-card__price">$65.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
     <!-- Category 3: Artisan Honey -->
-    <section class="category-stack-hero" style="background-image: url('https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=1600&q=80');">
-      <div class="category-stack-content reveal">
-        <h1 style="color: #fff; margin-bottom: var(--space-sm);">Artisan Honey</h1>
-        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: var(--space-md);">Raw, unfiltered, and ethically harvested from our own apiaries. Taste the terroir of the local blooms.</p>
-        <a href="shop.html" class="btn btn-primary">Browse Honey &rarr;</a>
-        
-        <div class="sub-categories">
-          <a href="shop.html" class="sub-category-tag">Wildflower</a>
-          <a href="shop.html" class="sub-category-tag">Clover</a>
-          <a href="shop.html" class="sub-category-tag">Manuka</a>
-          <a href="shop.html" class="sub-category-tag">Raw</a>
-          <a href="shop.html" class="sub-category-tag">Infused</a>
-        </div>
-      </div>
-    </section>
-    <div class="category-stack-products">
+    <div class="category-stack-products" style="padding-top: var(--space-lg);">
       <div class="container">
+        <div class="reveal" style="text-align: center; margin-bottom: var(--space-md);">
+          <h2 style="font-size: 2.2rem; margin-bottom: var(--space-xs);">Artisan Honey</h2>
+          <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto var(--space-sm) auto;">Raw, unfiltered,
+            and ethically harvested from our own apiaries. Taste the terroir of the local blooms.</p>
+          <div class="sub-categories" style="justify-content: center; margin-top: 0;">
+            <a href="shop.html" class="sub-category-tag">Wildflower</a>
+            <a href="shop.html" class="sub-category-tag">Clover</a>
+            <a href="shop.html" class="sub-category-tag">Manuka</a>
+            <a href="shop.html" class="sub-category-tag">Raw</a>
+            <a href="shop.html" class="sub-category-tag">Infused</a>
+          </div>
+        </div>
         <div class="grid-3 reveal-stagger">
+
+          <!-- Product 1 — Raw Wildflower Honey — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Wildflower" class="card-img"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-honey-wildflower.jpg" alt="Raw Wildflower Honey" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Artisan Honey</span>
-              <a href="product-single.html"><h3 class="product-card__title">Raw Wildflower Honey</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Raw Wildflower Honey</h3>
+              </a>
               <span class="product-card__price">$18.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
+          <!-- Product 2 — Reserve Amber Honey — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=800&q=80" alt="Reserve" class="card-img"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-honey-reserve-amber.jpg" alt="Reserve Amber Honey" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Artisan Honey</span>
-              <a href="product-single.html"><h3 class="product-card__title">Reserve Amber Honey</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Reserve Amber Honey</h3>
+              </a>
               <span class="product-card__price">$24.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
+          <!-- Product 3 — Raw Honeycomb Square — 800×800px -->
           <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Comb" class="card-img" style="filter: hue-rotate(20deg);"></a>
+            <a href="product-single.html" class="product-card__img-wrap">
+              <img src="assets/images/cat-honey-honeycomb.jpg" alt="Raw Honeycomb Square" class="card-img">
+            </a>
             <div class="product-card__content">
               <span class="product-card__category">Artisan Honey</span>
-              <a href="product-single.html"><h3 class="product-card__title">Raw Honeycomb Square</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Raw Honeycomb Square</h3>
+              </a>
               <span class="product-card__price">$28.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
   </main>
 
-  <footer class="footer">...</footer>
-  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-sm);">
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <div class="footer-links">
+            <a href="shop.html">All Products</a>
+            <a href="categories.html">Hive Equipment</a>
+            <a href="categories.html">Protective Gear</a>
+            <a href="categories.html">Artisan Honey</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <div class="footer-links">
+            <a href="guides.html">Beginner Guides</a>
+            <a href="guide-single.html">Your First Hive</a>
+            <a href="guide-single.html">Harvesting Guide</a>
+            <a href="blog.html">Blog & News</a>
+            <a href="contact.html">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

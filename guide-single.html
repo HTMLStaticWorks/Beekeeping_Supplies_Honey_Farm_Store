@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your First Hive Setup - HiveFlow</title>
-  
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -14,6 +15,7 @@
       gap: var(--space-xl);
       padding-top: var(--space-md);
     }
+
     .article-sidebar {
       width: 280px;
       flex-shrink: 0;
@@ -21,6 +23,7 @@
       top: 100px;
       height: max-content;
     }
+
     .article-content {
       flex-grow: 1;
       max-width: 800px;
@@ -32,6 +35,7 @@
       border-radius: var(--radius);
       padding: var(--space-md);
     }
+
     .toc-link {
       display: block;
       color: var(--color-muted);
@@ -40,7 +44,9 @@
       padding-left: 12px;
       transition: all 0.2s;
     }
-    .toc-link:hover, .toc-link.active {
+
+    .toc-link:hover,
+    .toc-link.active {
       color: var(--color-primary);
       border-left-color: var(--color-primary);
     }
@@ -53,33 +59,118 @@
       margin-bottom: var(--space-lg);
     }
 
-    .article-content h2 { margin-top: var(--space-xl); margin-bottom: var(--space-sm); }
-    .article-content h3 { margin-top: var(--space-lg); margin-bottom: var(--space-sm); }
-    .article-content p { font-size: 1.1rem; margin-bottom: var(--space-md); }
-    
+    .article-content h2 {
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+    }
+
+    .article-content h3 {
+      margin-top: var(--space-lg);
+      margin-bottom: var(--space-sm);
+    }
+
+    .article-content p {
+      font-size: 1.1rem;
+      margin-bottom: var(--space-md);
+    }
+
     @media (max-width: 1024px) {
-      .article-layout { flex-direction: column-reverse; }
-      .article-sidebar { width: 100%; position: static; }
-      .article-hero { height: 300px; }
+      .article-layout {
+        flex-direction: column-reverse;
+      }
+
+      .article-sidebar {
+        width: 100%;
+        position: static;
+      }
+
+      .article-hero {
+        height: 300px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header class="header">...</header>
-  <div class="nav-drawer">...</div>
+  <!-- Header & Navbar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="guides.html" class="nav-link">Beginner Guides</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
+
+        <button class="hamburger" aria-label="Menu">
+          <i class="ph-duotone ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer (Mobile) -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </div>
+      <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" style="color: var(--color-primary)">Home</a>
+        <a href="home2.html" class="drawer-link">Home 2</a>
+        <a href="shop.html" class="drawer-link">Shop</a>
+        <a href="categories.html" class="drawer-link">Categories</a>
+        <a href="guides.html" class="drawer-link">Beginner Guides</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
+      <div class="drawer-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i> RTL
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i> Theme
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="cart-drawer">...</div>
 
   <main style="padding-top: 100px;">
     <div class="container">
-      
+
       <!-- Breadcrumb -->
       <div style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: var(--space-md);">
-        <a href="index.html">Home</a> &gt; <a href="guides.html">Beginner Guides</a> &gt; <span style="color: var(--color-secondary);">Your First Hive Setup</span>
+        <a href="index.html">Home</a> &gt; <a href="guides.html">Beginner Guides</a> &gt; <span
+          style="color: var(--color-secondary);">Your First Hive Setup</span>
       </div>
 
       <div class="article-layout">
-        
+
         <!-- Sidebar TOC -->
         <aside class="article-sidebar reveal">
           <div class="toc-card">
@@ -94,31 +185,43 @@
 
         <!-- Main Article -->
         <article class="article-content reveal" style="animation-delay: 100ms;">
-          <span class="difficulty-badge" style="background: rgba(56, 161, 105, 0.1); color: var(--color-success); padding: 4px 12px; border-radius: 20px; font-family: var(--font-utility); font-size: 0.8rem; font-weight: 500;">Beginner</span>
-          
+          <span class="difficulty-badge"
+            style="background: rgba(56, 161, 105, 0.1); color: var(--color-success); padding: 4px 12px; border-radius: 20px; font-family: var(--font-utility); font-size: 0.8rem; font-weight: 500;">Beginner</span>
+
           <h1 style="margin-block: var(--space-sm);">Your First Hive Setup: The Ultimate Guide</h1>
-          
-          <div style="display: flex; gap: var(--space-md); color: var(--color-muted); font-size: 0.9rem; margin-bottom: var(--space-lg);">
+
+          <div
+            style="display: flex; gap: var(--space-md); color: var(--color-muted); font-size: 0.9rem; margin-bottom: var(--space-lg);">
             <span><i class="ph-duotone ph-clock"></i> 10 min read</span>
             <span><i class="ph-duotone ph-calendar"></i> Updated March 2025</span>
           </div>
 
-          <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=1000&q=80" alt="Apiary Setup" class="article-hero">
+          <img src="assets/images/article-hive-setup-hero.jpg" alt="White Langstroth beehive in a sunny cottage garden"
+            class="article-hero">
 
-          <p class="lead">Starting your first beehive is an exciting journey. However, proper preparation before the bees arrive is critical. A well-placed, correctly assembled hive sets the foundation for a healthy, thriving colony.</p>
+          <p class="lead">Starting your first beehive is an exciting journey. However, proper preparation before the
+            bees arrive is critical. A well-placed, correctly assembled hive sets the foundation for a healthy, thriving
+            colony.</p>
 
           <h2 id="location">1. Choosing the Right Location</h2>
-          <p>The site you choose for your hive will greatly impact your bees' success and your convenience as a beekeeper.</p>
-          <ul style="list-style: disc; padding-left: 20px; margin-bottom: var(--space-md); font-size: 1.1rem; color: var(--color-secondary);">
-            <li><strong>Sunlight:</strong> Bees prefer morning sun to get them active early. A south or southeast facing entrance is ideal.</li>
-            <li><strong>Wind Protection:</strong> Provide a windbreak against harsh winter winds (e.g., a fence or hedge).</li>
-            <li><strong>Water Source:</strong> Bees need a constant supply of water. If you don't have a natural source nearby, provide a shallow birdbath with stones.</li>
-            <li><strong>Level Ground:</strong> The hive must be level side-to-side, but pitched slightly forward so rain doesn't run into the entrance.</li>
+          <p>The site you choose for your hive will greatly impact your bees' success and your convenience as a
+            beekeeper.</p>
+          <ul
+            style="list-style: disc; padding-left: 20px; margin-bottom: var(--space-md); font-size: 1.1rem; color: var(--color-secondary);">
+            <li><strong>Sunlight:</strong> Bees prefer morning sun to get them active early. A south or southeast facing
+              entrance is ideal.</li>
+            <li><strong>Wind Protection:</strong> Provide a windbreak against harsh winter winds (e.g., a fence or
+              hedge).</li>
+            <li><strong>Water Source:</strong> Bees need a constant supply of water. If you don't have a natural source
+              nearby, provide a shallow birdbath with stones.</li>
+            <li><strong>Level Ground:</strong> The hive must be level side-to-side, but pitched slightly forward so rain
+              doesn't run into the entrance.</li>
           </ul>
 
           <h2 id="equipment">2. Essential Equipment</h2>
           <p>Before your bees arrive, you need your woodenware ready. A standard starter setup includes:</p>
-          <ul style="list-style: disc; padding-left: 20px; margin-bottom: var(--space-md); font-size: 1.1rem; color: var(--color-secondary);">
+          <ul
+            style="list-style: disc; padding-left: 20px; margin-bottom: var(--space-md); font-size: 1.1rem; color: var(--color-secondary);">
             <li>Bottom board (screened or solid)</li>
             <li>Entrance reducer</li>
             <li>One or two deep brood boxes with 10 frames each</li>
@@ -127,70 +230,87 @@
           </ul>
 
           <h2 id="assembly">3. Assembling the Hive</h2>
-          <p>Most starter kits come unassembled. Use an outdoor-grade wood glue and the provided nails or screws. Ensure all joints are square. Once assembled, you should paint or stain the <strong>outside</strong> of the boxes to protect them from the weather. Never paint the inside; the bees prefer natural wood and will coat it with propolis.</p>
+          <p>Most starter kits come unassembled. Use an outdoor-grade wood glue and the provided nails or screws. Ensure
+            all joints are square. Once assembled, you should paint or stain the <strong>outside</strong> of the boxes
+            to protect them from the weather. Never paint the inside; the bees prefer natural wood and will coat it with
+            propolis.</p>
 
           <h2 id="installation">4. Installing the Bees</h2>
-          <p>Whether you ordered a package (bees in a screened box with a mated queen in a cage) or a nuc (a mini-hive with drawn comb and an active laying queen), installation day is thrilling.</p>
-          <p>For packages: remove 4 frames from the center of your box. Spray the bees lightly with sugar syrup so they can't fly as easily. Remove the queen cage, check she is alive, and wedge her between two central frames. Shake the remaining bees into the gap and replace the outer frames.</p>
+          <p>Whether you ordered a package (bees in a screened box with a mated queen in a cage) or a nuc (a mini-hive
+            with drawn comb and an active laying queen), installation day is thrilling.</p>
+          <p>For packages: remove 4 frames from the center of your box. Spray the bees lightly with sugar syrup so they
+            can't fly as easily. Remove the queen cage, check she is alive, and wedge her between two central frames.
+            Shake the remaining bees into the gap and replace the outer frames.</p>
 
           <h2 id="first-week">5. The First Week</h2>
-          <p>Leave the bees alone for 5-7 days! It is tempting to peek, but opening the hive too soon can cause them to abscond (leave). Provide a 1:1 sugar syrup feed continuously to help them draw out the wax foundation. On day 7, do a quick inspection to ensure the queen has been released from her cage and has started laying eggs.</p>
-          
+          <p>Leave the bees alone for 5-7 days! It is tempting to peek, but opening the hive too soon can cause them to
+            abscond (leave). Provide a 1:1 sugar syrup feed continuously to help them draw out the wax foundation. On
+            day 7, do a quick inspection to ensure the queen has been released from her cage and has started laying
+            eggs.</p>
+
         </article>
       </div>
     </div>
   </main>
 
-  <!-- Related Products (You'll need these) -->
-  <section style="background: var(--color-surface); padding-block: var(--space-xl); margin-top: var(--space-xl);">
+
+
+  <footer class="footer">
     <div class="container">
-      <div class="section-header reveal">
-        <h2 class="section-title">You'll need these</h2>
-        <p class="section-subtext">Essential gear mentioned in this guide to get you started.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-sm);">
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <div class="footer-links">
+            <a href="shop.html">All Products</a>
+            <a href="categories.html">Hive Equipment</a>
+            <a href="categories.html">Protective Gear</a>
+            <a href="categories.html">Artisan Honey</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <div class="footer-links">
+            <a href="guides.html">Beginner Guides</a>
+            <a href="guide-single.html">Your First Hive</a>
+            <a href="guide-single.html">Harvesting Guide</a>
+            <a href="blog.html">Blog & News</a>
+            <a href="contact.html">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
+          </div>
+        </div>
       </div>
-      <div class="related-scroll reveal">
-        <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Hive" class="card-img"></div>
-          <div class="product-card__content">
-            <span class="product-card__category">Equipment</span>
-            <h3 class="product-card__title">Complete Starter Hive Kit</h3>
-            <span class="product-card__price">$145.00</span>
-            <button class="btn btn-outline card-btn">Add to Cart</button>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Suit" class="card-img"></div>
-          <div class="product-card__content">
-            <span class="product-card__category">Protective Gear</span>
-            <h3 class="product-card__title">Ventilated Bee Suit</h3>
-            <span class="product-card__price">$89.00</span>
-            <button class="btn btn-outline card-btn">Add to Cart</button>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Smoker" class="card-img" style="filter: hue-rotate(180deg);"></div>
-          <div class="product-card__content">
-            <span class="product-card__category">Tools</span>
-            <h3 class="product-card__title">Stainless Smoker</h3>
-            <span class="product-card__price">$38.00</span>
-            <button class="btn btn-outline card-btn">Add to Cart</button>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Gloves" class="card-img" style="filter: sepia(0.5);"></div>
-          <div class="product-card__content">
-            <span class="product-card__category">Protective Gear</span>
-            <h3 class="product-card__title">Vented Goatskin Gloves</h3>
-            <span class="product-card__price">$24.00</span>
-            <button class="btn btn-outline card-btn">Add to Cart</button>
-          </div>
-        </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
       </div>
     </div>
-  </section>
+  </footer>
 
-  <footer class="footer">...</footer>
-  
   <script src="assets/js/main.js"></script>
   <script>
     // Simple Active TOC logic
@@ -214,4 +334,5 @@
     });
   </script>
 </body>
+
 </html>

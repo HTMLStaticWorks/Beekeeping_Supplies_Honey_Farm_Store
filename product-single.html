@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raw Wildflower Honey - HiveFlow</title>
-  
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -25,7 +26,7 @@
       margin-bottom: var(--space-sm);
       background: var(--color-surface);
     }
-    
+
     .gallery-main img {
       width: 100%;
       height: 100%;
@@ -46,12 +47,27 @@
       border: 2px solid transparent;
       transition: border-color 0.2s;
     }
-    .gallery-thumb.active { border-color: var(--color-primary); }
-    .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
 
-    .product-meta h1 { margin-bottom: var(--space-xs); }
-    .product-price { font-size: 2rem; color: var(--color-primary); margin-bottom: var(--space-md); }
-    
+    .gallery-thumb.active {
+      border-color: var(--color-primary);
+    }
+
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-meta h1 {
+      margin-bottom: var(--space-xs);
+    }
+
+    .product-price {
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+
     .pickup-badge {
       display: inline-flex;
       align-items: center;
@@ -76,14 +92,22 @@
       border-radius: var(--radius);
       overflow: hidden;
     }
-    
-    .qty-selector .qty-btn, .qty-selector .qty-input {
+
+    .qty-selector .qty-btn,
+    .qty-selector .qty-input {
       border: none;
       height: 48px;
       font-size: 1.1rem;
     }
-    .qty-selector .qty-btn { width: 48px; }
-    .qty-selector .qty-input { width: 60px; font-weight: 500; }
+
+    .qty-selector .qty-btn {
+      width: 48px;
+    }
+
+    .qty-selector .qty-input {
+      width: 60px;
+      font-weight: 500;
+    }
 
     /* Tabs */
     .tabs-nav {
@@ -93,6 +117,7 @@
       overflow-x: auto;
       scrollbar-width: none;
     }
+
     .tab-btn {
       padding: 12px 24px;
       font-family: var(--font-body);
@@ -104,13 +129,30 @@
       border-bottom: 2px solid transparent;
       white-space: nowrap;
     }
+
     .tab-btn.active {
       color: var(--color-secondary);
       border-color: var(--color-primary);
     }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; animation: fadeIn 0.4s ease; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
 
     /* Horizontal Scroll for Related Products on Mobile */
     .related-scroll {
@@ -121,42 +163,117 @@
       padding-bottom: var(--space-md);
       scrollbar-width: none;
     }
+
     .related-scroll .product-card {
       min-width: 260px;
       scroll-snap-align: start;
     }
 
     @media (max-width: 1024px) {
-      .product-single-grid { gap: var(--space-lg); }
+      .product-single-grid {
+        gap: var(--space-lg);
+      }
     }
+
     @media (max-width: 768px) {
-      .product-single-grid { grid-template-columns: 1fr; }
+      .product-single-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header class="header">...</header>
-  <div class="nav-drawer">...</div>
+  <!-- Header & Navbar -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="guides.html" class="nav-link">Beginner Guides</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
+
+        <button class="hamburger" aria-label="Menu">
+          <i class="ph-duotone ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer (Mobile) -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </div>
+      <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
+    </div>
+    <div class="drawer-body">
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" style="color: var(--color-primary)">Home</a>
+        <a href="home2.html" class="drawer-link">Home 2</a>
+        <a href="shop.html" class="drawer-link">Shop</a>
+        <a href="categories.html" class="drawer-link">Categories</a>
+        <a href="guides.html" class="drawer-link">Beginner Guides</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
+      <div class="drawer-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i> RTL
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i> Theme
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="cart-drawer">...</div>
 
   <main style="padding-top: 100px;">
     <div class="container">
       <!-- Breadcrumb -->
       <div style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: var(--space-md);">
-        <a href="index.html">Home</a> &gt; <a href="shop.html">Shop</a> &gt; <a href="categories.html">Artisan Honey</a> &gt; <span style="color: var(--color-secondary);">Raw Wildflower Honey</span>
+        <a href="index.html">Home</a> &gt; <a href="shop.html">Shop</a> &gt; <a href="categories.html">Artisan Honey</a>
+        &gt; <span style="color: var(--color-secondary);">Raw Wildflower Honey</span>
       </div>
 
       <div class="product-single-grid">
         <!-- Gallery -->
         <div class="product-gallery reveal">
           <div class="gallery-main">
-            <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Raw Wildflower Honey Main" id="main-img">
+            <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80"
+              alt="Raw Wildflower Honey Main" id="main-img">
           </div>
           <div class="gallery-thumbs">
-            <div class="gallery-thumb active"><img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Thumb 1"></div>
-            <div class="gallery-thumb"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=800&q=80" alt="Thumb 2"></div>
-            <div class="gallery-thumb"><img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Thumb 3"></div>
+            <div class="gallery-thumb active"><img
+                src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Thumb 1"></div>
+            <div class="gallery-thumb"><img
+                src="https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=800&q=80" alt="Thumb 2"></div>
+            <div class="gallery-thumb"><img
+                src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Thumb 3"></div>
           </div>
         </div>
 
@@ -164,10 +281,11 @@
         <div class="product-meta reveal" style="animation-delay: 100ms;">
           <span class="product-card__category">Artisan Honey</span>
           <h1>Raw Wildflower Honey (16oz)</h1>
-          
+
           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: var(--space-sm);">
             <div style="color: var(--color-accent); font-size: 1.1rem;">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i>
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i>
             </div>
             <span class="caption">(24 Reviews)</span>
           </div>
@@ -178,7 +296,8 @@
             <i class="ph-bold ph-check"></i> Available for farm pickup
           </div>
 
-          <p style="font-size: 1.1rem; color: var(--color-muted);">Sourced directly from our spring wildflower blooms. Unfiltered, unheated, and packed with natural pollen and enzymes.</p>
+          <p style="font-size: 1.1rem; color: var(--color-muted);">Sourced directly from our spring wildflower blooms.
+            Unfiltered, unheated, and packed with natural pollen and enzymes.</p>
 
           <div class="add-to-cart-bar">
             <div class="qty-selector">
@@ -187,7 +306,9 @@
               <button class="qty-btn plus">+</button>
             </div>
             <button class="btn btn-primary" style="flex-grow: 1; font-size: 1.1rem;">Add to Cart</button>
-            <button class="wishlist-btn" style="position: static; width: 48px; height: 48px; border: 1px solid var(--color-border); border-radius: var(--radius);"><i class="ph-duotone ph-heart"></i></button>
+            <button class="wishlist-btn"
+              style="position: static; width: 48px; height: 48px; border: 1px solid var(--color-border); border-radius: var(--radius);"><i
+                class="ph-duotone ph-heart"></i></button>
           </div>
 
           <p class="sku">SKU: HF-HNY-WF-16</p>
@@ -202,7 +323,9 @@
             </div>
             <div class="tabs-container">
               <div id="tab-desc" class="tab-content active">
-                <p>Our raw wildflower honey is harvested in small batches right here on the farm. Because we never pasteurize or ultra-filter our honey, it retains all the subtle floral notes, natural pollen, and beneficial enzymes.</p>
+                <p>Our raw wildflower honey is harvested in small batches right here on the farm. Because we never
+                  pasteurize or ultra-filter our honey, it retains all the subtle floral notes, natural pollen, and
+                  beneficial enzymes.</p>
                 <p>Perfect for drizzling over warm biscuits, stirring into tea, or enjoying right off the spoon.</p>
               </div>
               <div id="tab-ingr" class="tab-content">
@@ -210,11 +333,13 @@
                   <li>100% Raw, Unfiltered Wildflower Honey</li>
                   <li>No additives, preservatives, or artificial syrups.</li>
                 </ul>
-                <p style="margin-top: 16px;"><em>Note: Raw honey will naturally crystallize over time. Place the jar in warm water to reliquefy. Do not feed to infants under 1 year of age.</em></p>
+                <p style="margin-top: 16px;"><em>Note: Raw honey will naturally crystallize over time. Place the jar in
+                    warm water to reliquefy. Do not feed to infants under 1 year of age.</em></p>
               </div>
               <div id="tab-ship" class="tab-content">
                 <p><strong>Farm Pickup:</strong> Select "Local Pickup" at checkout. Available Thu-Sun 10AM-4PM.</p>
-                <p><strong>Shipping:</strong> We ship nationwide via USPS Priority. Orders typically ship within 2 business days.</p>
+                <p><strong>Shipping:</strong> We ship nationwide via USPS Priority. Orders typically ship within 2
+                  business days.</p>
               </div>
               <div id="tab-rev" class="tab-content">
                 <p>Customer reviews will be displayed here.</p>
@@ -233,7 +358,9 @@
       </div>
       <div class="related-scroll reveal">
         <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=800&q=80" alt="Honey" class="card-img"></div>
+          <div class="product-card__img-wrap"><img
+              src="https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=800&q=80" alt="Honey"
+              class="card-img"></div>
           <div class="product-card__content">
             <span class="product-card__category">Artisan Honey</span>
             <h3 class="product-card__title">Reserve Amber Honey</h3>
@@ -242,7 +369,9 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Candles" class="card-img"></div>
+          <div class="product-card__img-wrap"><img
+              src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Candles"
+              class="card-img"></div>
           <div class="product-card__content">
             <span class="product-card__category">Gifts</span>
             <h3 class="product-card__title">Beeswax Taper Candles</h3>
@@ -251,7 +380,9 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Honey" class="card-img" style="filter: hue-rotate(40deg);"></div>
+          <div class="product-card__img-wrap"><img
+              src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Honey" class="card-img"
+              style="filter: hue-rotate(40deg);"></div>
           <div class="product-card__content">
             <span class="product-card__category">Artisan Honey</span>
             <h3 class="product-card__title">Clover Honey (32oz)</h3>
@@ -260,7 +391,9 @@
           </div>
         </div>
         <div class="product-card">
-          <div class="product-card__img-wrap"><img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Comb" class="card-img" style="filter: hue-rotate(90deg);"></div>
+          <div class="product-card__img-wrap"><img
+              src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Comb" class="card-img"
+              style="filter: hue-rotate(90deg);"></div>
           <div class="product-card__content">
             <span class="product-card__category">Artisan Honey</span>
             <h3 class="product-card__title">Raw Honeycomb Square</h3>
@@ -272,8 +405,62 @@
     </div>
   </section>
 
-  <footer class="footer">...</footer>
-  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-sm);">
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <div class="footer-links">
+            <a href="shop.html">All Products</a>
+            <a href="categories.html">Hive Equipment</a>
+            <a href="categories.html">Protective Gear</a>
+            <a href="categories.html">Artisan Honey</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <div class="footer-links">
+            <a href="guides.html">Beginner Guides</a>
+            <a href="guide-single.html">Your First Hive</a>
+            <a href="guide-single.html">Harvesting Guide</a>
+            <a href="blog.html">Blog & News</a>
+            <a href="contact.html">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
   <script src="assets/js/shop.js"></script>
   <script>
@@ -281,7 +468,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       const mainImg = document.getElementById('main-img');
       const thumbs = document.querySelectorAll('.gallery-thumb');
-      
+
       thumbs.forEach(thumb => {
         thumb.addEventListener('click', () => {
           thumbs.forEach(t => t.classList.remove('active'));
@@ -299,7 +486,7 @@
         btn.addEventListener('click', () => {
           tabBtns.forEach(b => b.classList.remove('active'));
           tabContents.forEach(c => c.classList.remove('active'));
-          
+
           btn.classList.add('active');
           const targetId = btn.getAttribute('data-target');
           document.getElementById(targetId).classList.add('active');
@@ -308,4 +495,5 @@
     });
   </script>
 </body>
+
 </html>

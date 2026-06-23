@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HiveFlow - Beekeeping Supplies & Honey Farm Store</title>
-  <meta name="description" content="Premium beekeeping supplies, protective gear, and artisan honey. Ethically sourced and local pickup available.">
-  
+  <meta name="description"
+    content="Premium beekeeping supplies, protective gear, and artisan honey. Ethically sourced and local pickup available.">
+
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
   <!-- Honey Drip Loader -->
   <div class="loader-overlay">
-    <svg class="honey-drip-svg" width="100" height="150" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 0C50 0 20 50 20 80C20 96.5685 33.4315 110 50 110C66.5685 110 80 96.5685 80 80C80 50 50 0 50 0Z" stroke="var(--color-primary)" stroke-width="4" stroke-linecap="round"/>
-      <path d="M50 120C50 120 40 130 40 140C40 145.523 44.4772 150 50 150C55.5228 150 60 145.523 60 140C60 130 50 120 50 120Z" fill="var(--color-primary)"/>
+    <svg class="honey-drip-svg" width="100" height="150" viewBox="0 0 100 150" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 0C50 0 20 50 20 80C20 96.5685 33.4315 110 50 110C66.5685 110 80 96.5685 80 80C80 50 50 0 50 0Z"
+        stroke="var(--color-primary)" stroke-width="4" stroke-linecap="round" />
+      <path
+        d="M50 120C50 120 40 130 40 140C40 145.523 44.4772 150 50 150C55.5228 150 60 145.523 60 140C60 130 50 120 50 120Z"
+        fill="var(--color-primary)" />
     </svg>
   </div>
 
@@ -27,10 +34,7 @@
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7.77V16.22L12 22L22 16.22V7.77L12 2ZM10.5 19.34L4 15.59V8.84L10.5 12.59V19.34ZM12 10.86L5.5 7.11L12 3.36L18.5 7.11L12 10.86ZM13.5 19.34V12.59L20 8.84V15.59L13.5 19.34Z"/>
-        </svg>
-        HiveFlow
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
       </a>
 
       <nav class="nav-links">
@@ -51,10 +55,7 @@
           <i class="ph-duotone ph-moon"></i>
         </button>
         <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
-        <button class="icon-btn cart-btn" aria-label="Open Cart">
-          <i class="ph-duotone ph-shopping-cart"></i>
-          <span class="cart-badge">3</span>
-        </button>
+
         <button class="hamburger" aria-label="Menu">
           <i class="ph-duotone ph-list"></i>
         </button>
@@ -67,10 +68,7 @@
   <div class="nav-drawer">
     <div class="drawer-header">
       <div class="logo">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7.77V16.22L12 22L22 16.22V7.77L12 2Z"/>
-        </svg>
-        HiveFlow
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
       </div>
       <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
     </div>
@@ -86,6 +84,7 @@
       </nav>
     </div>
     <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
       <div class="drawer-actions">
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
           <i class="ph-duotone ph-arrows-left-right"></i> RTL
@@ -113,7 +112,8 @@
       </div>
 
       <div class="cart-item">
-        <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Raw Wildflower Honey" class="cart-item-img">
+        <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Raw Wildflower Honey"
+          class="cart-item-img">
         <div class="cart-item-info">
           <h4 class="cart-item-title">Raw Wildflower Honey</h4>
           <span class="cart-item-price">$18.00</span>
@@ -136,31 +136,161 @@
 
   <main>
     <!-- Section 1: Hero -->
-    <section class="hero" style="position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 80px;">
-      
+    <section class="hero"
+      style="position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 80px;">
+
       <!-- Hex Particles -->
-      <svg class="hex-particle" style="top: 20%; left: 10%; width: 60px;" viewBox="0 0 100 100"><polygon points="50 0, 100 25, 100 75, 50 100, 0 75, 0 25"/></svg>
-      <svg class="hex-particle" style="top: 60%; left: 40%; width: 40px; animation-delay: -2s;" viewBox="0 0 100 100"><polygon points="50 0, 100 25, 100 75, 50 100, 0 75, 0 25"/></svg>
-      <svg class="hex-particle" style="top: 30%; right: 20%; width: 80px; animation-delay: -4s;" viewBox="0 0 100 100"><polygon points="50 0, 100 25, 100 75, 50 100, 0 75, 0 25"/></svg>
+      <svg class="hex-particle" style="top: 20%; left: 10%; width: 60px;" viewBox="0 0 100 100">
+        <polygon points="50 0, 100 25, 100 75, 50 100, 0 75, 0 25" />
+      </svg>
+      <svg class="hex-particle" style="top: 60%; left: 40%; width: 40px; animation-delay: -2s;" viewBox="0 0 100 100">
+        <polygon points="50 0, 100 25, 100 75, 50 100, 0 75, 0 25" />
+      </svg>
+      <svg class="hex-particle" style="top: 30%; right: 20%; width: 80px; animation-delay: -4s;" viewBox="0 0 100 100">
+        <polygon points="50 0, 100 25, 100 75, 50 100, 0 75, 0 25" />
+      </svg>
 
       <div class="container grid-2" style="align-items: center; position: relative; z-index: 1;">
-        <div class="hero-content reveal">
-          <h1 style="margin-bottom: var(--space-md);">The sweet reward of <br><span style="color: var(--color-primary);">natural craft.</span></h1>
-          <p class="lead" style="margin-bottom: var(--space-lg); min-height: 32px;"><span class="typewriter"></span><span style="animation: blink 1s infinite;">|</span></p>
-          <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
-            <a href="shop.html" class="btn btn-primary">Shop the Hive</a>
-            <a href="#pickup" class="btn btn-outline">Find Local Pickup</a>
+        <div class="hero-content reveal" style="text-align: center;">
+          <h1 style="margin-bottom: var(--space-md);">The sweet reward of <br><span
+              style="color: var(--color-primary);">natural craft.</span></h1>
+          <p class="lead" style="margin-bottom: var(--space-lg); min-height: 32px;"><span
+              class="typewriter"></span><span style="animation: blink 1s infinite;">|</span></p>
+          <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: center;">
+            <a href="shop.html" class="btn btn-primary" style="flex: 1; max-width: 220px;">Shop the Hive</a>
+            <a href="#pickup" class="btn btn-outline" style="flex: 1; max-width: 220px;">Find Local Pickup</a>
           </div>
         </div>
         <div class="hero-image" style="position: relative;">
-          <!-- Hexagonal Mask Image -->
-          <div style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); overflow: hidden; aspect-ratio: 1/1; position: relative;">
-            <img src="https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=800&q=80" alt="Honey jars" class="parallax-bg" style="width: 100%; height: 120%; object-fit: cover; position: absolute; top: -10%;">
+          <!-- Hexagonal Mask Image — 800×800px square source recommended -->
+          <div
+            style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); overflow: hidden; aspect-ratio: 1/1; position: relative;">
+            <img src="assets/images/hero-honey-jars.jpg" alt="Honey jars" class="parallax-bg"
+              style="width: 100%; height: 120%; object-fit: cover; position: absolute; top: -10%;">
           </div>
         </div>
       </div>
       <style>
-        @keyframes blink { 50% { opacity: 0; } }
+        @keyframes blink {
+          50% {
+            opacity: 0;
+          }
+        }
+
+        @media (max-width: 1024px) {
+
+          .categories-grid,
+          .products-grid,
+          .guides-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+          section.hero {
+            min-height: 70vh !important;
+            padding-block: 80px 40px !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+
+          .categories-grid,
+          .products-grid,
+          .guides-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+
+          .categories-grid .category-tile:nth-child(3),
+          .products-grid .product-card:nth-child(3),
+          .guides-grid .hover-lift:nth-child(3) {
+            grid-column: span 2;
+            justify-self: center;
+            width: calc(50% - (var(--space-md) / 2));
+          }
+        }
+
+        @media (max-width: 480px) {
+
+          .categories-grid,
+          .products-grid,
+          .guides-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .categories-grid .category-tile:nth-child(3),
+          .products-grid .product-card:nth-child(3),
+          .guides-grid .hover-lift:nth-child(3) {
+            grid-column: auto;
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .testimonial-carousel .testimonial-card {
+            flex: 0 0 100% !important;
+            min-width: 0 !important;
+          }
+        }
+
+        @media (min-width: 1440px) {
+          section {
+            padding-block: 160px !important;
+          }
+
+          .testimonial-carousel {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            overflow-x: visible !important;
+            scroll-snap-type: none !important;
+            padding-bottom: 0 !important;
+          }
+
+          .testimonial-carousel .testimonial-card {
+            min-width: 0 !important;
+            flex: none !important;
+            scroll-snap-align: none !important;
+          }
+        }
+
+        .testimonial-card {
+          text-align: center;
+        }
+
+        .testimonial-card>div[style*="display: flex"] {
+          flex-direction: column !important;
+          align-items: center !important;
+          text-align: center !important;
+        }
+
+        .featured-products .product-card__content {
+          align-items: center;
+          text-align: center;
+        }
+
+        .pickup-card-info {
+          transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+        }
+
+        .pickup-card-info:hover {
+          transform: translateY(-5px);
+          background: rgba(255, 255, 255, 0.18) !important;
+          border-color: rgba(255, 255, 255, 0.4) !important;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .pickup-card-info i {
+          transition: transform 0.3s ease;
+        }
+
+        .pickup-card-info:hover i {
+          transform: scale(1.15) rotate(-5deg);
+        }
+
+        .testimonial-carousel::-webkit-scrollbar {
+          display: none;
+        }
       </style>
     </section>
 
@@ -171,28 +301,35 @@
           <h2 class="section-title">Explore the Hive</h2>
           <p class="section-subtext">Everything you need from the first swarm to the final harvest.</p>
         </div>
-        <div class="grid-3 reveal-stagger">
+        <div class="grid-3 reveal-stagger categories-grid">
+
+          <!-- Category 1 — Hive Equipment — 800×800px -->
           <div class="category-tile" onclick="window.location.href='categories.html'">
-            <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Hive Equipment" loading="lazy">
+            <img src="assets/images/category-hive-equipment.jpg" alt="Hive Equipment" loading="lazy">
             <div class="category-tile-overlay">
               <h3>Hive Equipment</h3>
               <span>Browse Boxes & Frames &rarr;</span>
             </div>
           </div>
+
+          <!-- Category 2 — Protective Gear — 800×800px -->
           <div class="category-tile" onclick="window.location.href='categories.html'">
-            <img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Protective Gear" loading="lazy">
+            <img src="assets/images/category-protective-gear.jpg" alt="Protective Gear" loading="lazy">
             <div class="category-tile-overlay">
               <h3>Protective Gear</h3>
               <span>Browse Suits & Veils &rarr;</span>
             </div>
           </div>
+
+          <!-- Category 3 — Artisan Honey — 800×800px -->
           <div class="category-tile" onclick="window.location.href='categories.html'">
-            <img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Artisan Honey" loading="lazy">
+            <img src="assets/images/category-artisan-honey.jpg" alt="Artisan Honey" loading="lazy">
             <div class="category-tile-overlay">
               <h3>Artisan Honey</h3>
               <span>Browse Varietals &rarr;</span>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -204,59 +341,57 @@
           <h2 class="section-title">Fresh from the Combs</h2>
           <p class="section-subtext">Our most loved products, crafted by bees and curated by us.</p>
         </div>
-        <div class="grid-4 reveal-stagger">
-          <!-- Product 1 -->
+        <div class="grid-3 reveal-stagger products-grid">
+
+          <!-- Product 1 — Raw Wildflower Honey — 800×800px -->
           <div class="product-card">
             <a href="product-single.html" class="product-card__img-wrap">
-              <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Raw Wildflower Honey" class="card-img" loading="lazy">
+              <img src="assets/images/product-wildflower-honey.jpg" alt="Raw Wildflower Honey" class="card-img"
+                loading="lazy">
             </a>
             <div class="product-card__content">
               <span class="product-card__category">Artisan Honey</span>
-              <a href="product-single.html"><h3 class="product-card__title">Raw Wildflower Honey (16oz)</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Raw Wildflower Honey (16oz)</h3>
+              </a>
               <span class="product-card__price">$18.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
-          <!-- Product 2 -->
+
+          <!-- Product 2 — Complete Starter Hive Kit — 800×800px -->
           <div class="product-card">
             <a href="product-single.html" class="product-card__img-wrap">
-              <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Langstroth Hive Kit" class="card-img" loading="lazy">
+              <img src="assets/images/product-hive-kit.jpg" alt="Langstroth Hive Kit" class="card-img" loading="lazy">
             </a>
             <div class="product-card__content">
               <span class="product-card__category">Equipment</span>
-              <a href="product-single.html"><h3 class="product-card__title">Complete Starter Hive Kit</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Complete Starter Hive Kit</h3>
+              </a>
               <span class="product-card__price">$145.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
-          <!-- Product 3 -->
+
+          <!-- Product 3 — Pure Beeswax Taper Candles — 800×800px -->
           <div class="product-card">
             <a href="product-single.html" class="product-card__img-wrap">
-              <img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Beeswax Candles" class="card-img" loading="lazy">
+              <img src="assets/images/product-beeswax-candles.jpg" alt="Beeswax Candles" class="card-img"
+                loading="lazy">
             </a>
             <div class="product-card__content">
               <span class="product-card__category">Gifts</span>
-              <a href="product-single.html"><h3 class="product-card__title">Pure Beeswax Taper Candles</h3></a>
+              <a href="product-single.html">
+                <h3 class="product-card__title">Pure Beeswax Taper Candles</h3>
+              </a>
               <span class="product-card__price">$22.00</span>
               <button class="btn btn-outline card-btn">Add to Cart</button>
             </div>
           </div>
-          <!-- Product 4 -->
-          <div class="product-card">
-            <a href="product-single.html" class="product-card__img-wrap">
-              <img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Beekeeper Suit" class="card-img" loading="lazy">
-            </a>
-            <div class="product-card__content">
-              <span class="product-card__category">Protective Gear</span>
-              <a href="product-single.html"><h3 class="product-card__title">Ventilated Beekeeper Suit</h3></a>
-              <span class="product-card__price">$89.00</span>
-              <button class="btn btn-outline card-btn">Add to Cart</button>
-            </div>
-          </div>
+
         </div>
-        <div style="text-align: center; margin-top: var(--space-xl);" class="reveal">
-          <a href="shop.html" class="btn btn-secondary">View All Products</a>
-        </div>
+
       </div>
     </section>
 
@@ -265,46 +400,85 @@
       <div class="container reveal">
         <div class="section-header">
           <h2 class="section-title">Beginner Starter Guides</h2>
-          <p class="section-subtext">Learn the ancient art of beekeeping. From your first frame to your first harvest, we're here to help.</p>
+          <p class="section-subtext">Learn the ancient art of beekeeping. From your first frame to your first harvest,
+            we're here to help.</p>
         </div>
-        <div class="grid-3 reveal-stagger">
-          <div style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); transition: transform 0.3s;" class="hover-lift">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
-              <span class="badge">1</span>
-              <span class="caption"><i class="ph-duotone ph-clock"></i> 5 min read</span>
+        <div class="grid-3 reveal-stagger guides-grid">
+
+          <!-- Guide 1 — 400×240px -->
+          <div
+            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); transition: transform 0.3s; overflow: hidden;"
+            class="hover-lift">
+            <img src="assets/images/guide-hive-setup.jpg" alt="Beekeeper assembling a Langstroth hive"
+              style="width: 100%; height: 180px; object-fit: cover; display: block;">
+            <div style="padding: var(--space-md);">
+              <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
+                <span class="badge">1</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 5 min read</span>
+              </div>
+              <h3 style="margin-bottom: var(--space-xs);">Your First & Best Hive Setup</h3>
+              <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Everything you
+                need to know about placing, assembling, and preparing your first Langstroth hive.</p>
+              <a href="guide-single.html"
+                style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read
+                Guide <i class="ph-bold ph-arrow-right"></i></a>
             </div>
-            <h3 style="margin-bottom: var(--space-xs);">Your First Hive Setup</h3>
-            <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Everything you need to know about placing, assembling, and preparing your first Langstroth hive.</p>
-            <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read Guide <i class="ph-bold ph-arrow-right"></i></a>
-          </div>
-          
-          <div style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); transition: transform 0.3s;" class="hover-lift">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
-              <span class="badge">2</span>
-              <span class="caption"><i class="ph-duotone ph-clock"></i> 8 min read</span>
-            </div>
-            <h3 style="margin-bottom: var(--space-xs);">Gear Up: What You Really Need</h3>
-            <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Sorting the essentials from the extras. A comprehensive guide to protective gear and tools.</p>
-            <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read Guide <i class="ph-bold ph-arrow-right"></i></a>
           </div>
 
-          <div style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); transition: transform 0.3s;" class="hover-lift">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
-              <span class="badge">3</span>
-              <span class="caption"><i class="ph-duotone ph-clock"></i> 10 min read</span>
+          <!-- Guide 2 — 400×240px -->
+          <div
+            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); transition: transform 0.3s; overflow: hidden;"
+            class="hover-lift">
+            <img src="assets/images/guide-protective-gear.jpg" alt="Beekeeping protective gear flat-lay"
+              style="width: 100%; height: 180px; object-fit: cover; display: block;">
+            <div style="padding: var(--space-md);">
+              <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
+                <span class="badge">2</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 8 min read</span>
+              </div>
+              <h3 style="margin-bottom: var(--space-xs);">Gear Up: What You Really Need</h3>
+              <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Sorting the
+                essentials from the extras. A comprehensive detailed guide to protective gear and tools.</p>
+              <a href="guide-single.html"
+                style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read
+                Guide <i class="ph-bold ph-arrow-right"></i></a>
             </div>
-            <h3 style="margin-bottom: var(--space-xs);">Harvesting Your First Honey</h3>
-            <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Step-by-step instructions for safely extracting honey while keeping your colony healthy and happy.</p>
-            <a href="guide-single.html" style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read Guide <i class="ph-bold ph-arrow-right"></i></a>
           </div>
+
+          <!-- Guide 3 — 400×240px -->
+          <div
+            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); transition: transform 0.3s; overflow: hidden;"
+            class="hover-lift">
+            <img src="assets/images/guide-harvesting-honey.jpg" alt="Beekeeper harvesting a honey frame"
+              style="width: 100%; height: 180px; object-fit: cover; display: block;">
+            <div style="padding: var(--space-md);">
+              <div
+                style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-sm);">
+                <span class="badge">3</span>
+                <span class="caption"><i class="ph-duotone ph-clock"></i> 10 min read</span>
+              </div>
+              <h3 style="margin-bottom: var(--space-xs);">Harvesting Your First Honey</h3>
+              <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Step-by-step
+                instructions for safely extracting honey while keeping your colony healthy and happy.</p>
+              <a href="guide-single.html"
+                style="color: var(--color-primary); font-weight: var(--weight-btn); display: inline-flex; align-items: center; gap: 4px;">Read
+                Guide <i class="ph-bold ph-arrow-right"></i></a>
+            </div>
+          </div>
+
         </div>
       </div>
       <style>
-        .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .hover-lift:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow);
+        }
       </style>
     </section>
 
-    <!-- Section 5: Why HiveFlow -->
+    <!-- Section 5:
     <section class="why-us">
       <div class="container">
         <div class="section-header reveal">
@@ -328,7 +502,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> Why HiveFlow -->
 
     <!-- Section 6: Testimonials -->
     <section class="testimonials" style="background: var(--color-bg); padding-bottom: 0;">
@@ -336,73 +510,114 @@
         <div class="section-header reveal">
           <h2 class="section-title">Voices from the Apiary</h2>
         </div>
-        
-        <div class="testimonial-carousel reveal" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: var(--space-md); padding-bottom: var(--space-xl); scrollbar-width: none;">
-          <!-- Card 1 -->
-          <div class="testimonial-card" style="min-width: 300px; flex: 0 0 400px; background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius); scroll-snap-align: start; position: relative;">
-            <i class="ph-fill ph-quotes" style="font-size: 3rem; color: var(--color-border); position: absolute; top: var(--space-md); right: var(--space-md);"></i>
+
+        <div class="testimonial-carousel reveal"
+          style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: var(--space-md); padding-bottom: var(--space-xl); scrollbar-width: none;">
+
+          <!-- Card 1 — Sarah Jenkins -->
+          <div class="testimonial-card"
+            style="min-width: 300px; flex: 0 0 400px; background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius); scroll-snap-align: start; position: relative;">
+            <i class="ph-fill ph-quotes"
+              style="font-size: 3rem; color: var(--color-border); position: absolute; top: var(--space-md); right: var(--space-md);"></i>
             <div style="color: var(--color-accent); margin-bottom: var(--space-sm);">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
             </div>
-            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: var(--space-md);">"The starter kit from HiveFlow is incredible. Their beginner guide gave me the confidence I needed to set up my first hive. The bees are thriving!"</p>
-            <div>
-              <h4 style="font-size: 1rem; margin-bottom: 0;">Sarah Jenkins</h4>
-              <span class="caption">Hobbyist Beekeeper, Oregon</span>
+            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: var(--space-md);">"The starter kit from
+              HiveFlow is incredible. Their beginner guide gave me the confidence I needed to set up my first hive. The
+              bees are thriving!"</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <img src="assets/images/avatar-sarah.jpg" alt="Sarah Jenkins"
+                style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--color-primary);">
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0;">Sarah Jenkins</h4>
+                <span class="caption">Hobbyist Beekeeper, Oregon</span>
+              </div>
             </div>
           </div>
-          <!-- Card 2 -->
-          <div class="testimonial-card" style="min-width: 300px; flex: 0 0 400px; background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius); scroll-snap-align: start; position: relative;">
-            <i class="ph-fill ph-quotes" style="font-size: 3rem; color: var(--color-border); position: absolute; top: var(--space-md); right: var(--space-md);"></i>
+
+          <!-- Card 2 — Mark D. -->
+          <div class="testimonial-card"
+            style="min-width: 300px; flex: 0 0 400px; background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius); scroll-snap-align: start; position: relative;">
+            <i class="ph-fill ph-quotes"
+              style="font-size: 3rem; color: var(--color-border); position: absolute; top: var(--space-md); right: var(--space-md);"></i>
             <div style="color: var(--color-accent); margin-bottom: var(--space-sm);">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
             </div>
-            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: var(--space-md);">"The raw wildflower honey is hands down the best I've ever tasted. You can really taste the terroir of the local flora. I'm a customer for life."</p>
-            <div>
-              <h4 style="font-size: 1rem; margin-bottom: 0;">Mark D.</h4>
-              <span class="caption">Local Pickup Customer</span>
+            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: var(--space-md);">"The raw wildflower honey
+              is hands down the best I've ever tasted. You can really taste the terroir of the local flora. I'm a
+              customer for life."</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <img src="assets/images/avatar-mark.jpg" alt="Mark D."
+                style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--color-primary);">
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0;">Mark D.</h4>
+                <span class="caption">Local Pickup Customer</span>
+              </div>
             </div>
           </div>
-           <!-- Card 3 -->
-           <div class="testimonial-card" style="min-width: 300px; flex: 0 0 400px; background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius); scroll-snap-align: start; position: relative;">
-            <i class="ph-fill ph-quotes" style="font-size: 3rem; color: var(--color-border); position: absolute; top: var(--space-md); right: var(--space-md);"></i>
+
+          <!-- Card 3 — Eleanor R. -->
+          <div class="testimonial-card"
+            style="min-width: 300px; flex: 0 0 400px; background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius); scroll-snap-align: start; position: relative;">
+            <i class="ph-fill ph-quotes"
+              style="font-size: 3rem; color: var(--color-border); position: absolute; top: var(--space-md); right: var(--space-md);"></i>
             <div style="color: var(--color-accent); margin-bottom: var(--space-sm);">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
             </div>
-            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: var(--space-md);">"Their ventilated suit is a lifesaver during the summer inspections. High quality zippers and great visibility. Highly recommend their gear."</p>
-            <div>
-              <h4 style="font-size: 1rem; margin-bottom: 0;">Eleanor R.</h4>
-              <span class="caption">Commercial Beekeeper</span>
+            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: var(--space-md);">"Their ventilated suit is
+              a lifesaver during the summer inspections. High quality zippers and great visibility. Highly recommend
+              their gear."</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <img src="assets/images/avatar-eleanor.jpg" alt="Eleanor R."
+                style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--color-primary);">
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 0;">Eleanor R.</h4>
+                <span class="caption">Commercial Beekeeper</span>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- Section 7: Local Pickup Banner -->
-    <section id="pickup" style="background: var(--color-primary); color: #fff; position: relative; padding: 80px 0; overflow: hidden;">
-      <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg width=\'40\' height=\'69.2820323027551\' viewBox=\'0 0 40 69.2820323027551\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 0l20 11.547v23.094L20 46.188 0 34.641V11.547z\' stroke=\'%23FFFFFF\' stroke-width=\'1\' stroke-opacity=\'0.15\' fill=\'none\'/%3E%3C/svg%3E');"></div>
+    <section id="pickup"
+      style="background: var(--color-primary); color: #fff; position: relative; padding: 80px 0; overflow: hidden;">
+      <div
+        style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,%3Csvg width=\'40\' height=\'69.2820323027551\' viewBox=\'0 0 40 69.2820323027551\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 0l20 11.547v23.094L20 46.188 0 34.641V11.547z\' stroke=\'%23FFFFFF\' stroke-width=\'1\' stroke-opacity=\'0.15\' fill=\'none\'/%3E%3C/svg%3E');">
+      </div>
       <div class="container reveal" style="position: relative; z-index: 1; text-align: center;">
         <h2 style="color: #fff; margin-bottom: var(--space-sm);">Order online, pick up at the farm.</h2>
-        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto var(--space-lg); opacity: 0.9;">Select "Local Pickup" at checkout. We'll have your order ready and waiting at our farm stand.</p>
-        
-        <div style="display: inline-flex; align-items: center; gap: var(--space-sm); background: rgba(255,255,255,0.1); padding: var(--space-md); border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2); text-align: left;">
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto var(--space-lg); opacity: 0.9;">Select "Local
+          Pickup" at checkout. We'll have your order ready and waiting at our farm stand.</p>
+
+        <div class="pickup-card-info"
+          style="display: inline-flex; align-items: center; gap: var(--space-sm); background: rgba(255,255,255,0.1); padding: var(--space-md); border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2); text-align: left;">
           <i class="ph-duotone ph-map-pin" style="font-size: 2.5rem; color: var(--color-accent);"></i>
           <div>
             <h4 style="color: #fff; margin-bottom: 4px;">HiveFlow Farm Stand</h4>
-            <p style="margin-bottom: 0; font-size: 0.9rem; opacity: 0.8;">123 Amber Lane, Meadow Valley, CA<br>Open Thu-Sun: 10AM - 4PM</p>
+            <p style="margin-bottom: 0; font-size: 0.9rem; opacity: 0.8;">123 Amber Lane, Meadow Valley, CA<br>Open
+              Thu-Sun: 10AM - 4PM</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Section 8: Newsletter CTA -->
-    <section class="newsletter reveal" style="background: var(--color-surface); text-align: center; padding-block: 100px;">
+    <section class="newsletter reveal"
+      style="background: var(--color-bg); text-align: center; padding-block: 100px;">
       <div class="container" style="max-width: 600px;">
         <h2 style="margin-bottom: var(--space-sm);">Join the Hive</h2>
-        <p style="color: var(--color-muted); margin-bottom: var(--space-lg);">Subscribe for seasonal beekeeping tips, new product launches, and exclusive honey reserves.</p>
-        
+        <p style="color: var(--color-muted); margin-bottom: var(--space-lg);">Subscribe for seasonal beekeeping tips,
+          new product launches, and exclusive honey reserves.</p>
+
         <form class="needs-validation" novalidate style="display: flex; gap: 8px;">
-          <input type="email" class="form-control" placeholder="Enter your email address" required style="flex-grow: 1;">
+          <input type="email" class="form-control" placeholder="Enter your email address" required
+            style="flex-grow: 1;">
           <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Subscribe</button>
         </form>
       </div>
@@ -415,19 +630,17 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="logo" style="margin-bottom: var(--space-sm);">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7.77V16.22L12 22L22 16.22V7.77L12 2Z"/>
-            </svg>
-            HiveFlow
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
           </div>
-          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and artisan honey from our farm to your home.</p>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
           <div class="social-icons">
             <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
             <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
             <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
           </div>
         </div>
-        
+
         <div class="footer-col">
           <h4>Shop</h4>
           <div class="footer-links">
@@ -453,19 +666,22 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <div class="footer-links">
-            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i> hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
             <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
-            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i> 123 Amber Lane<br>Meadow Valley, CA</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
-        &copy; 2025 HiveFlow. Made with 🍯 and care.
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
       </div>
     </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

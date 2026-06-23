@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop - HiveFlow</title>
-  
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
@@ -15,12 +16,12 @@
       gap: var(--space-lg);
       padding-top: var(--space-md);
     }
-    
+
     .shop-sidebar {
       width: 260px;
       flex-shrink: 0;
     }
-    
+
     .shop-main {
       flex-grow: 1;
     }
@@ -54,7 +55,10 @@
       color: var(--color-muted);
       transition: color var(--transition-base);
     }
-    .filter-label:hover { color: var(--color-secondary); }
+
+    .filter-label:hover {
+      color: var(--color-secondary);
+    }
 
     .shop-grid {
       display: grid;
@@ -76,11 +80,17 @@
       justify-content: center;
       cursor: pointer;
       z-index: 2;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease;
     }
-    .wishlist-btn:hover { transform: scale(1.1); }
-    .product-card__img-wrap { position: relative; }
+
+    .wishlist-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .product-card__img-wrap {
+      position: relative;
+    }
 
     .filter-toggle-btn {
       display: none;
@@ -91,7 +101,10 @@
     }
 
     @media (max-width: 1024px) {
-      .shop-grid { grid-template-columns: repeat(2, 1fr); }
+      .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .shop-sidebar {
         position: fixed;
         top: 0;
@@ -102,65 +115,171 @@
         padding: var(--space-md);
         overflow-y: auto;
         transition: left 0.4s ease;
-        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
       }
-      .shop-sidebar.open { left: 0; }
-      .filter-toggle-btn { display: inline-flex; }
-      .filter-close-btn { display: block; margin-bottom: var(--space-md); text-align: right; }
+
+      .shop-sidebar.open {
+        left: 0;
+      }
+
+      .filter-toggle-btn {
+        display: inline-flex;
+      }
+
+      .filter-close-btn {
+        display: block;
+        margin-bottom: var(--space-md);
+        text-align: right;
+      }
     }
 
     @media (max-width: 768px) {
-      .shop-grid { grid-template-columns: 1fr; }
+
+      .shop-header-bar {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-sm);
+        align-items: center;
+      }
+
+      .shop-header-bar .filter-toggle-btn {
+        grid-column: 1;
+        width: 100%;
+        justify-content: center;
+        padding-block: 10px;
+      }
+
+      .shop-header-bar>div {
+        grid-column: 2;
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .shop-header-bar>div label {
+        display: none !important;
+      }
+
+      .shop-header-bar select {
+        width: 100% !important;
+      }
+
+      .shop-header-bar .caption {
+        grid-column: 1 / span 2;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1439px) and (min-width: 481px) {
+      .shop-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .shop-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .shop-hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: #fff;
+      padding-block: 120px 80px;
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    .shop-hero h1 {
+      color: #fff;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Header (Same as index) -->
+  <!-- Header & Navbar -->
   <header class="header">
     <div class="container nav-container">
       <a href="index.html" class="logo">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7.77V16.22L12 22L22 16.22V7.77L12 2Z"/></svg>
-        HiveFlow
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
       </a>
+
       <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
         <a href="categories.html" class="nav-link">Categories</a>
         <a href="guides.html" class="nav-link">Beginner Guides</a>
         <a href="blog.html" class="nav-link">Blog</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
       <div class="nav-actions">
-        <button class="icon-btn rtl-toggle"><i class="ph-duotone ph-arrows-left-right"></i></button>
-        <button class="icon-btn theme-toggle"><i class="ph-duotone ph-moon"></i></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i>
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i>
+        </button>
         <a href="login.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Login</a>
-        <button class="icon-btn cart-btn"><i class="ph-duotone ph-shopping-cart"></i><span class="cart-badge">3</span></button>
-        <button class="hamburger"><i class="ph-duotone ph-list"></i></button>
+
+        <button class="hamburger" aria-label="Menu">
+          <i class="ph-duotone ph-list"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Drawers (Mobile Nav & Cart - identical content simplified for brevity) -->
-  <div class="nav-drawer">...</div>
-  <div class="cart-drawer">
-    <div class="cart-header">
-      <h3>Your Cart (3)</h3>
-      <button class="icon-btn cart-drawer-close"><i class="ph-duotone ph-x"></i></button>
+  <!-- Navigation Drawer (Mobile) -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+      </div>
+      <button class="icon-btn nav-drawer-close"><i class="ph-duotone ph-x"></i></button>
     </div>
-    <div class="cart-body"></div>
-    <div class="cart-footer"></div>
+    <div class="drawer-body">
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" style="color: var(--color-primary)">Home</a>
+        <a href="home2.html" class="drawer-link">Home 2</a>
+        <a href="shop.html" class="drawer-link">Shop</a>
+        <a href="categories.html" class="drawer-link">Categories</a>
+        <a href="guides.html" class="drawer-link">Beginner Guides</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="drawer-footer">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-md);">Login</a>
+      <div class="drawer-actions">
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph-duotone ph-arrows-left-right"></i> RTL
+        </button>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph-duotone ph-moon"></i> Theme
+        </button>
+      </div>
+    </div>
   </div>
 
-  <main style="padding-top: 100px;">
+
+  <main style="padding-top: 80px;">
+
+    <!-- Hero -->
+    <section class="shop-hero">
+      <div class="container reveal">
+        <h1 style="margin-bottom: var(--space-sm);">All Products</h1>
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">Premium beekeeping gear, tools,
+          protective wear, and 100% pure raw honey.</p>
+      </div>
+    </section>
+
     <div class="container">
       <!-- Breadcrumb -->
       <div style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: var(--space-md);">
         <a href="index.html">Home</a> &gt; <span style="color: var(--color-secondary);">Shop</span>
-      </div>
-
-      <div class="section-header reveal" style="text-align: left; align-items: flex-start; margin-bottom: var(--space-md);">
-        <h1>All Products</h1>
       </div>
 
       <div class="shop-layout reveal">
@@ -169,7 +288,7 @@
           <div class="filter-close-btn">
             <button class="icon-btn"><i class="ph-bold ph-x"></i></button>
           </div>
-          
+
           <div class="filter-group">
             <h4>Category</h4>
             <label class="filter-label"><input type="checkbox" checked> All</label>
@@ -182,7 +301,8 @@
           <div class="filter-group">
             <h4>Price Range</h4>
             <input type="range" id="price-range" min="0" max="200" value="150" style="width: 100%;">
-            <div style="display: flex; justify-content: space-between; margin-top: 8px; font-family: var(--font-utility); font-size: 0.9rem;">
+            <div
+              style="display: flex; justify-content: space-between; margin-top: 8px; font-family: var(--font-utility); font-size: 0.9rem;">
               <span>$0</span>
               <span id="price-value">$150</span>
             </div>
@@ -207,9 +327,10 @@
         <div class="shop-main">
           <div class="shop-header-bar">
             <button class="btn btn-outline filter-toggle-btn"><i class="ph-duotone ph-funnel"></i> Filters</button>
-            <span class="caption" style="display: inline-block;">Showing 1-12 of 36 results</span>
+
             <div style="display: flex; align-items: center; gap: 8px;">
-              <label for="sort-select" style="font-weight: var(--weight-label); color: var(--color-muted);">Sort by:</label>
+              <label for="sort-select" style="font-weight: var(--weight-label); color: var(--color-muted);">Sort
+                by:</label>
               <select id="sort-select" class="form-control" style="width: auto; padding: 6px 12px;">
                 <option>Best Sellers</option>
                 <option>New Arrivals</option>
@@ -220,89 +341,115 @@
           </div>
 
           <div class="shop-grid">
-            <!-- Product 1 -->
+
+            <!-- Product 1 — Raw Wildflower Honey — 800×800px -->
             <div class="product-card">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1587049352847-4d4b12b1413e?w=800&q=80" alt="Honey" class="card-img" loading="lazy">
+                <img src="assets/images/shop-wildflower-honey.jpg" alt="Raw Wildflower Honey" class="card-img"
+                  loading="lazy">
                 <button class="wishlist-btn"><i class="ph-duotone ph-heart"></i></button>
               </div>
               <div class="product-card__content">
                 <span class="product-card__category">Artisan Honey</span>
-                <a href="product-single.html"><h3 class="product-card__title">Raw Wildflower Honey</h3></a>
+                <a href="product-single.html">
+                  <h3 class="product-card__title">Raw Wildflower Honey</h3>
+                </a>
                 <span class="product-card__price">$18.00</span>
                 <button class="btn btn-outline card-btn">Add to Cart</button>
               </div>
             </div>
-            <!-- Product 2 -->
+
+            <!-- Product 2 — 10-Frame Langstroth Hive — 800×800px -->
             <div class="product-card">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Hive" class="card-img" loading="lazy">
+                <img src="assets/images/shop-langstroth-hive.jpg" alt="10-Frame Langstroth Hive" class="card-img"
+                  loading="lazy">
                 <button class="wishlist-btn"><i class="ph-duotone ph-heart"></i></button>
               </div>
               <div class="product-card__content">
                 <span class="product-card__category">Equipment</span>
-                <a href="product-single.html"><h3 class="product-card__title">10-Frame Langstroth Hive</h3></a>
+                <a href="product-single.html">
+                  <h3 class="product-card__title">10-Frame Langstroth Hive</h3>
+                </a>
                 <span class="product-card__price">$145.00</span>
                 <button class="btn btn-outline card-btn">Add to Cart</button>
               </div>
             </div>
-            <!-- Product 3 -->
+
+            <!-- Product 3 — Ventilated Bee Suit — 800×800px -->
             <div class="product-card">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1598460677567-0c7f1a3cb24d?w=800&q=80" alt="Suit" class="card-img" loading="lazy">
+                <img src="assets/images/shop-ventilated-suit.jpg" alt="Ventilated Bee Suit" class="card-img"
+                  loading="lazy">
                 <button class="wishlist-btn"><i class="ph-duotone ph-heart"></i></button>
               </div>
               <div class="product-card__content">
                 <span class="product-card__category">Protective Gear</span>
-                <a href="product-single.html"><h3 class="product-card__title">Ventilated Bee Suit</h3></a>
+                <a href="product-single.html">
+                  <h3 class="product-card__title">Ventilated Bee Suit</h3>
+                </a>
                 <span class="product-card__price">$89.00</span>
                 <button class="btn btn-outline card-btn">Add to Cart</button>
               </div>
             </div>
-            <!-- Product 4 -->
+
+            <!-- Product 4 — Beeswax Taper Candles — 800×800px -->
             <div class="product-card">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1628543105325-1e428c0d9a6c?w=800&q=80" alt="Candles" class="card-img" loading="lazy">
+                <img src="assets/images/shop-taper-candles.jpg" alt="Beeswax Taper Candles" class="card-img"
+                  loading="lazy">
                 <button class="wishlist-btn"><i class="ph-duotone ph-heart"></i></button>
               </div>
               <div class="product-card__content">
                 <span class="product-card__category">Gifts</span>
-                <a href="product-single.html"><h3 class="product-card__title">Beeswax Taper Candles</h3></a>
+                <a href="product-single.html">
+                  <h3 class="product-card__title">Beeswax Taper Candles</h3>
+                </a>
                 <span class="product-card__price">$22.00</span>
                 <button class="btn btn-outline card-btn">Add to Cart</button>
               </div>
             </div>
-             <!-- Product 5 -->
-             <div class="product-card">
+
+            <!-- Product 5 — Reserve Amber Honey — 800×800px -->
+            <div class="product-card">
               <div class="product-card__img-wrap">
-                <img src="https://images.unsplash.com/photo-1587049352851-8d4e89134a62?w=800&q=80" alt="Reserve Honey" class="card-img" loading="lazy">
+                <img src="assets/images/shop-reserve-amber-honey.jpg" alt="Reserve Amber Honey" class="card-img"
+                  loading="lazy">
                 <button class="wishlist-btn"><i class="ph-duotone ph-heart"></i></button>
               </div>
               <div class="product-card__content">
                 <span class="product-card__category">Artisan Honey</span>
-                <a href="product-single.html"><h3 class="product-card__title">Reserve Amber Honey</h3></a>
+                <a href="product-single.html">
+                  <h3 class="product-card__title">Reserve Amber Honey</h3>
+                </a>
                 <span class="product-card__price">$24.00</span>
                 <button class="btn btn-outline card-btn">Add to Cart</button>
               </div>
             </div>
-            <!-- Product 6 -->
+
+            <!-- Product 6 — Stainless Steel Smoker (Sale) — 800×800px -->
             <div class="product-card">
               <div class="product-card__img-wrap">
                 <div style="position: absolute; top: 12px; left: 12px; z-index: 2;" class="badge">Sale</div>
-                <img src="https://images.unsplash.com/photo-1621379478491-0d3674d8de1c?w=800&q=80" alt="Smoker" class="card-img" loading="lazy" style="filter: hue-rotate(20deg);">
+                <img src="assets/images/shop-smoker.jpg" alt="Stainless Steel Smoker" class="card-img" loading="lazy">
                 <button class="wishlist-btn"><i class="ph-duotone ph-heart"></i></button>
               </div>
               <div class="product-card__content">
                 <span class="product-card__category">Equipment</span>
-                <a href="product-single.html"><h3 class="product-card__title">Stainless Steel Smoker</h3></a>
-                <span class="product-card__price"><del style="color: var(--color-muted); font-size: 0.9em; margin-right: 4px;">$45.00</del>$38.00</span>
+                <a href="product-single.html">
+                  <h3 class="product-card__title">Stainless Steel Smoker</h3>
+                </a>
+                <span class="product-card__price">
+                  <del style="color: var(--color-muted); font-size: 0.9em; margin-right: 4px;">$45.00</del>$38.00
+                </span>
                 <button class="btn btn-outline card-btn">Add to Cart</button>
               </div>
             </div>
+
           </div>
-          
+
           <!-- Pagination -->
-          <div style="display: flex; justify-content: center; gap: 8px; margin-top: var(--space-xl);">
+          <div style="display: flex; justify-content: center; gap: 8px; margin-top: 60px; margin-bottom: 80px;">
             <button class="btn btn-primary" style="padding: 8px 16px;">1</button>
             <button class="btn btn-outline" style="padding: 8px 16px;">2</button>
             <button class="btn btn-outline" style="padding: 8px 16px;">3</button>
@@ -313,9 +460,64 @@
     </div>
   </main>
 
-  <footer class="footer">...</footer>
-  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-sm);">
+            <img src="assets/images/logo.svg" alt="HiveFlow" class="logo-img">
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; max-width: 250px;">Premium beekeeping supplies and
+            artisan honey from our farm to your home.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="#" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <div class="footer-links">
+            <a href="shop.html">All Products</a>
+            <a href="categories.html">Hive Equipment</a>
+            <a href="categories.html">Protective Gear</a>
+            <a href="categories.html">Artisan Honey</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <div class="footer-links">
+            <a href="guides.html">Beginner Guides</a>
+            <a href="guide-single.html">Your First Hive</a>
+            <a href="guide-single.html">Harvesting Guide</a>
+            <a href="blog.html">Blog & News</a>
+            <a href="contact.html">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-envelope-simple"></i>
+              hello@hiveflow.com</span>
+            <span style="color: var(--color-muted);"><i class="ph-fill ph-phone"></i> (555) 123-4567</span>
+            <span style="color: var(--color-muted); margin-top: 8px; display: block;"><i class="ph-fill ph-map-pin"></i>
+              123 Amber Lane<br>Meadow Valley, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 HiveFlow. ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
   <script src="assets/js/main.js"></script>
   <script src="assets/js/shop.js"></script>
 </body>
+
 </html>
