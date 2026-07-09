@@ -337,6 +337,7 @@
     <section class="featured-products">
       <div class="container">
         <div class="section-header reveal">
+          <span class="section-eyebrow">Best Sellers</span>
           <h2 class="section-title">Fresh from the Combs</h2>
           <p class="section-subtext">Discover our latest harvest of 100% raw, unpasteurized artisan honey and premium beekeeping equipment.</p>
         </div>
@@ -414,6 +415,7 @@
     <section class="why-us">
       <div class="container">
         <div class="section-header reveal">
+          <span class="section-eyebrow">Our Promise</span>
           <h2 class="section-title">Why HiveFlow</h2>
           <p class="section-subtext">We are committed to providing premium quality supplies and supporting sustainable beekeeping practices.</p>
         </div>
@@ -460,6 +462,7 @@
     <section class="testimonials" style="background: var(--color-surface);">
       <div class="container">
         <div class="section-header reveal">
+          <span class="section-eyebrow">Customer Stories</span>
           <h2 class="section-title">Voices from the Apiary</h2>
           <p class="section-subtext">Hear from our community of passionate hobbyists and professional apiarists alike.</p>
         </div>
@@ -516,6 +519,7 @@
     <section class="categories">
       <div class="container">
         <div class="section-header reveal">
+          <span class="section-eyebrow">Shop by Category</span>
           <h2 class="section-title">Explore the Hive</h2>
           <p class="section-subtext">Browse our curated categories to find the perfect gear for your apiary.</p>
         </div>
@@ -553,12 +557,13 @@
     <section class="guides" style="background: var(--color-surface);">
       <div class="container reveal">
         <div class="section-header">
+          <span class="section-eyebrow">Learn the Craft</span>
           <h2 class="section-title">Beginner Starter Guides</h2>
           <p class="section-subtext">New to the craft? Check out our step-by-step guides to help you start your beekeeping journey.</p>
         </div>
         <div class="grid-3 reveal-stagger guides-grid-home2">
           <div
-            style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); transition: transform 0.3s; display: flex; flex-direction: column; height: 100%; align-items: center; text-align: center;"
+            style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); display: flex; flex-direction: column; height: 100%; align-items: center; text-align: center;"
             class="hover-lift">
             <h3 style="margin-bottom: var(--space-xs);">Your First Hive Setup</h3>
             <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Everything you
@@ -568,7 +573,7 @@
               Guide <i class="ph-bold ph-arrow-right"></i></a>
           </div>
           <div
-            style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); transition: transform 0.3s; display: flex; flex-direction: column; height: 100%; align-items: center; text-align: center;"
+            style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); display: flex; flex-direction: column; height: 100%; align-items: center; text-align: center;"
             class="hover-lift">
             <h3 style="margin-bottom: var(--space-xs);">Harvesting Your First Honey</h3>
             <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Step-by-step
@@ -578,7 +583,7 @@
               Guide <i class="ph-bold ph-arrow-right"></i></a>
           </div>
           <div
-            style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); transition: transform 0.3s; display: flex; flex-direction: column; height: 100%; align-items: center; text-align: center;"
+            style="background: var(--color-bg); border-radius: var(--radius); padding: var(--space-md); border: 1px solid var(--color-border); display: flex; flex-direction: column; height: 100%; align-items: center; text-align: center;"
             class="hover-lift">
             <h3 style="margin-bottom: var(--space-xs);">Gear Up: Essentials</h3>
             <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Sorting the
@@ -590,9 +595,18 @@
         </div>
       </div>
       <style>
+        .hover-lift {
+          box-shadow: var(--shadow-sm);
+          transition: transform 0.4s var(--ease-out),
+                      box-shadow 0.4s var(--ease-out),
+                      border-color 0.4s var(--ease-out),
+                      opacity 0.7s var(--ease-out);
+        }
+
         .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: var(--shadow);
+          transform: translateY(-5px);
+          box-shadow: var(--shadow-hover);
+          border-color: var(--color-border-strong);
         }
       </style>
     </section>

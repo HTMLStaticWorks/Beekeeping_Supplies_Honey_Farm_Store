@@ -322,6 +322,7 @@
     <section class="categories" style="background: var(--color-surface);">
       <div class="container">
         <div class="section-header reveal">
+          <span class="section-eyebrow">Shop by Category</span>
           <h2 class="section-title">Explore the Hive</h2>
           <p class="section-subtext">Everything you need from the first swarm to the final harvest.</p>
         </div>
@@ -362,6 +363,7 @@
     <section class="featured-products">
       <div class="container">
         <div class="section-header reveal">
+          <span class="section-eyebrow">Best Sellers</span>
           <h2 class="section-title">Fresh from the Combs</h2>
           <p class="section-subtext">Our most loved products, crafted by bees and curated by us.</p>
         </div>
@@ -423,6 +425,7 @@
     <section class="guides" style="background: var(--color-surface); position: relative; overflow: hidden;">
       <div class="container reveal">
         <div class="section-header">
+          <span class="section-eyebrow">Learn the Craft</span>
           <h2 class="section-title">Beginner Starter Guides</h2>
           <p class="section-subtext">Learn the ancient art of beekeeping. From your first frame to your first harvest,
             we're here to help.</p>
@@ -431,7 +434,7 @@
 
           <!-- Guide 1 — 400×240px -->
           <div
-            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); transition: transform 0.3s; overflow: hidden;"
+            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); overflow: hidden;"
             class="hover-lift">
             <img src="assets/images/guide-hive-setup.jpg" alt="Beekeeper assembling a Langstroth hive"
               style="width: 100%; height: 180px; object-fit: cover; display: block;">
@@ -452,7 +455,7 @@
 
           <!-- Guide 2 — 400×240px -->
           <div
-            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); transition: transform 0.3s; overflow: hidden;"
+            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); overflow: hidden;"
             class="hover-lift">
             <img src="assets/images/guide-protective-gear.jpg" alt="Beekeeping protective gear flat-lay"
               style="width: 100%; height: 180px; object-fit: cover; display: block;">
@@ -473,7 +476,7 @@
 
           <!-- Guide 3 — 400×240px -->
           <div
-            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); transition: transform 0.3s; overflow: hidden;"
+            style="background: var(--color-bg); border-radius: var(--radius); border: 1px solid var(--color-border); overflow: hidden;"
             class="hover-lift">
             <img src="assets/images/guide-harvesting-honey.jpg" alt="Beekeeper harvesting a honey frame"
               style="width: 100%; height: 180px; object-fit: cover; display: block;">
@@ -495,9 +498,26 @@
         </div>
       </div>
       <style>
+        .hover-lift {
+          box-shadow: var(--shadow-sm);
+          transition: transform 0.4s var(--ease-out),
+                      box-shadow 0.4s var(--ease-out),
+                      border-color 0.4s var(--ease-out),
+                      opacity 0.7s var(--ease-out);
+        }
+
         .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: var(--shadow);
+          transform: translateY(-5px);
+          box-shadow: var(--shadow-hover);
+          border-color: var(--color-border-strong);
+        }
+
+        .hover-lift img {
+          transition: transform 0.7s var(--ease-out);
+        }
+
+        .hover-lift:hover img {
+          transform: scale(1.04);
         }
       </style>
     </section>
@@ -532,6 +552,7 @@
     <section class="testimonials" style="background: var(--color-bg); padding-bottom: 0;">
       <div class="container">
         <div class="section-header reveal">
+          <span class="section-eyebrow">Customer Stories</span>
           <h2 class="section-title">Voices from the Apiary</h2>
         </div>
 
